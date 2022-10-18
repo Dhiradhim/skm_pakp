@@ -357,7 +357,7 @@ a.btn_1.rounded,
 }
 
 .content-left {
-  background-color: #434bdf;
+  background-color: #1A5276;
   padding: 0;
 }
 
@@ -443,6 +443,7 @@ a.btn_1.rounded,
   display: flex;
   justify-content: center;
   align-items: top;
+  background-color: #D1F2EB;
 }
 @media (max-width: 991px) {
   .content-right {
