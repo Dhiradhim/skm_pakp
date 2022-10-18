@@ -104,6 +104,7 @@
 											<span class="checkmark"></span>
 										</label>
 									</div>
+								</div>
 									<div class="form-group">
 										<label class="container_check version_2">Perempuan
 											<input type="radio" name="jenis_kelamin[]" value="perempuan" class="required" onchange="getVals(this, 'jenis_kelamin');">
@@ -195,7 +196,7 @@
 										<input type="text" name="lainnya" class="form-control required" placeholder="Lainnya" onchange="getVals(this, 'lainnya');">
 									</div>
 									<hr>
-									<h3 class="main_question"><strong>4. Untuk pihak siapa Saudara menggunakan layanan?</strong></h3>
+									<h3 class="main_question"><strong>5. Untuk pihak siapa Saudara menggunakan layanan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Diri Sendiri (Pribadi/Instansi)
 											<input type="radio" name="pihak[]" value="Diri Sendiri_(Pribadi/Instansi)" class="required" onchange="getVals(this, 'pihak');">
@@ -218,12 +219,12 @@
 										<input type="text" name="lainnya" class="form-control required" placeholder="Lainnya" onchange="getVals(this, 'lainnya');">
 									</div>
 									<hr>
-									<h3 class="main_question"><strong>5. Nama instansi</strong></h3>
+									<h3 class="main_question"><strong>6. Nama instansi</strong></h3>
 									<div class="form-group">
 										<input type="text" name="lainnya" class="form-control required" placeholder="Nama instansi" onchange="getVals(this, 'lainnya');">
 									</div>
 									<hr>
-									<h3 class="main_question"><strong>6. Keterkaitan Saudara dengan layanan peradilan</strong></h3>
+									<h3 class="main_question"><strong>7. Keterkaitan Saudara dengan layanan peradilan</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Pemohon / Termohon / Penggugat / Tergugat
 											<input type="radio" name="keterkaitan[]" value="Pemohon/Termohon/Penggugat/Tergugat" class="required" onchange="getVals(this, 'keterkaitan');">
@@ -252,7 +253,7 @@
 										<input type="text" name="lainnya" class="form-control required" placeholder="Lainnya" onchange="getVals(this, 'lainnya');">
 									</div>
 									<hr>
-									<h3 class="main_question"><strong>7. Jenis layanan/keperluan</strong></h3>
+									<h3 class="main_question"><strong>8. Jenis layanan/keperluan</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Gugatan
 											<input type="radio" name="jenis_layanan[]" value="gugatan" class="required" onchange="getVals(this, 'jenis_layanan');">
@@ -281,7 +282,7 @@
 										<input type="text" name="lainnya" class="form-control required" placeholder="Lainnya" onchange="getVals(this, 'lainnya');">
 									</div>
 									<hr>
-									<h3 class="main_question"><strong>8. Suku bangsa</strong></h3>
+									<h3 class="main_question"><strong>9. Suku bangsa</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Alor
 											<input type="radio" name="suku_bangsa[]" value="alor)" class="required" onchange="getVals(this, 'suku_bangsa');">
