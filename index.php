@@ -71,12 +71,12 @@
 					<!-- /social -->
 					<div>
 						<figure><img src="img/info_graphic_3.svg" alt="" class="img-fluid"></figure>
-						<h2>pa kp</h2>
-						<p>Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas concludaturque usu, facete detracto patrioque an per, lucilius pertinacia eu vel. Adhuc invidunt duo ex. Eu tantas dolorum ullamcorper qui.</p>
-						<a href="#0" class="btn_1 rounded">Purchase this template</a>
+						<h2>SURVEI KEPUASAN MASYARAKAT</h2>
+						<h2>DAN</h2>
+						<h2>INDEKS PERSEPSI KORUPSI</h2>
+						<p>Survei kepuasan masyarakat digunakan untuk mengukur kepuasan masyarakat pengguna layanan di lingkungan Pengadilan Agama Kupang Kelas IA. Indeks persepsi korupsi sebagai wujud dukungan dan peran aktif Pengadilan Agama Kupang Kelas IA dalam kegiatan pencegahan dan pemberantasan korupsi.</p>
 						<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
 					</div>
-					<div class="copy">© 2018 Wilio</div>
 				</div>
 				<!-- /content-left-wrapper -->
 			</div>
@@ -93,7 +93,7 @@
 							<!-- Leave for security protection, read docs for details -->
 							<div id="middle-wizard">
 								<div class="step">
-									<h3 class="main_question"><strong>1/4</strong>Please fill with your details</h3>
+									<h3 class="main_question"><strong>1/4</strong>Silahkan mengisi biodata Anda terlebih dahulu!</h3>
 									<div class="form-group">
 										<div class="styled-select clearfix">
 											<select class="wide required" name="jenis_kelamin" onchange="getVals(this, 'jenis_kelamin');">
