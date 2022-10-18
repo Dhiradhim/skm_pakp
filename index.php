@@ -1,5 +1,5 @@
 <?php
-
+include('koneksi.php');
 ?>
 
 <!DOCTYPE html>
@@ -91,14 +91,14 @@
 									<h3 class="main_question" class="wide required"><strong>1. Jenis Kelamin</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Laki-laki
-											<input type="radio" name="jenis_kelamin[]" value="laki-laki" class="required" onchange="getVals(this, 'jenis_kelamin');">
+											<input type="radio" name="jenis_kelamin" value="laki-laki" class="required" onchange="getVals(this, 'jenis_kelamin');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 								
 									<div class="form-group">
 										<label class="container_check version_2">Perempuan
-											<input type="radio" name="jenis_kelamin[]" value="perempuan" class="required" onchange="getVals(this, 'jenis_kelamin');">
+											<input type="radio" name="jenis_kelamin" value="perempuan" class="required" onchange="getVals(this, 'jenis_kelamin');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -106,43 +106,43 @@
 									<h3 class="main_question"><strong>2. Pendidikan</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">SD (Sekolah Dasar)/Sederajat
-											<input type="radio" name="pendidikan[]" value="SD_(Sekolah Dasar)/Sederajat" class="required" onchange="getVals(this, 'pendidikan');">
+											<input type="radio" name="pendidikan" value="SD" class="required" onchange="getVals(this, 'pendidikan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">SMP (Sekolah Menengah Pertama)/Sederajat
-											<input type="radio" name="pendidikan[]" value="SMP_(Sekolah Menengah Pertama)/Sederajat" class="required" onchange="getVals(this, 'pendidikan');">
+											<input type="radio" name="pendidikan" value="SMP" class="required" onchange="getVals(this, 'pendidikan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">SMA (Sekolah Menengah Atas)/Sederajat
-											<input type="radio" name="pendidikan[]" value="SMA_(Sekolah Menengah Atas)/Sederajat Pertama)/Sederajat" class="required" onchange="getVals(this, 'pendidikan');">
+											<input type="radio" name="pendidikan" value="SMA" class="required" onchange="getVals(this, 'pendidikan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">D1/D2/D3/D4 (Diploma)
-											<input type="radio" name="pendidikan[]" value="D1/D2/D3/D4_(Diploma) Pertama)/Sederajat" class="required" onchange="getVals(this, 'pendidikan');">
+											<input type="radio" name="pendidikan" value="Diploma" class="required" onchange="getVals(this, 'pendidikan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">S1 (Sarjana)
-											<input type="radio" name="pendidikan[]" value="S1_(Sarjana)" class="required" onchange="getVals(this, 'pendidikan');">
+											<input type="radio" name="pendidikan" value="S1" class="required" onchange="getVals(this, 'pendidikan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">S2 (Magister)
-											<input type="radio" name="pendidikan[]" value="S2_(Magister)" class="required" onchange="getVals(this, 'pendidikan');">
+											<input type="radio" name="pendidikan" value="S2" class="required" onchange="getVals(this, 'pendidikan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">S3 (Doktor)
-											<input type="radio" name="pendidikan[]" value="S3_(Doktor)" class="required" onchange="getVals(this, 'pendidikan');">
+											<input type="radio" name="pendidikan" value="S3" class="required" onchange="getVals(this, 'pendidikan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -155,59 +155,59 @@
 									<h3 class="main_question"><strong>4. Pekerjaan</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">PNS/TNI/POLRI
-											<input type="radio" name="pekerjaan[]" value="PNS/TNI/POLRI" class="required radio1" onchange="getVals(this, 'pekerjaan');">
+											<input type="radio" name="pekerjaan" value="PNS/TNI/POLRI" class="required radio1" onchange="getVals(this, 'pekerjaan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Pegawai Swasta
-											<input type="radio" name="pekerjaan[]" value="pegawai_swasta" class="required radio1" onchange="getVals(this, 'pekerjaan');">
+											<input type="radio" name="pekerjaan" value="pegawai_swasta" class="required radio1" onchange="getVals(this, 'pekerjaan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Wiraswasta / Pengusaha
-											<input type="radio" name="pekerjaan[]" value="wiraswasta/pengusaha" class="required radio1" onchange="getVals(this, 'pekerjaan');">
+											<input type="radio" name="pekerjaan" value="wiraswasta/pengusaha" class="required radio1" onchange="getVals(this, 'pekerjaan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Pelajar/Mahasiswa
-											<input type="radio" name="pekerjaan[]" value="pelajar/mahasiswa" class="required radio1" onchange="getVals(this, 'pekerjaan');">
+											<input type="radio" name="pekerjaan" value="pelajar/mahasiswa" class="required radio1" onchange="getVals(this, 'pekerjaan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Lainnya
-											<input type="radio" name="pekerjaan[]" class="required radio1 other1" onchange="getVals(this, 'pekerjaan');">
+											<input type="radio" name="pekerjaan" class="required radio1 other1" value="lainnya" onchange="getVals(this, 'pekerjaan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
-										<input type="text" name="pekerjaan[]" id="lainnya1" class="form-control" disabled="true" placeholder="Lainnya">
+										<input type="text" name="pekerjaan_lainnya" id="lainnya1" class="form-control" disabled="true" placeholder="Lainnya">
 									</div>
 									<hr>
 									<h3 class="main_question"><strong>5. Untuk pihak siapa Saudara menggunakan layanan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Diri Sendiri (Pribadi/Instansi)
-											<input type="radio" name="pihak[]" value="Diri Sendiri_(Pribadi/Instansi)" class="required radio2" onchange="getVals(this, 'pihak');">
+											<input type="radio" name="pihak" value="Diri Sendiri" class="required radio2" onchange="getVals(this, 'pihak');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Orang Lain (Kuasa/Kuasa Hukum/Pengacara)
-											<input type="radio" name="pihak[]" value="Orang_Lain_(Kuasa/Kuasa Hukum/Pengacara)" class="required radio2" onchange="getVals(this, 'pihak');">
+											<input type="radio" name="pihak" value="Orang_Lain" class="required radio2" onchange="getVals(this, 'pihak');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Lainnya
-											<input type="radio" name="pihak[]" class="required radio2 other2" onchange="getVals(this, 'pihak');">
+											<input type="radio" name="pihak" class="required radio2 other2" value="lainnya" onchange="getVals(this, 'pihak');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
-										<input type="text" name="pihak[]" id="lainnya2" class="form-control" disabled="true" placeholder="Lainnya">
+										<input type="text" name="pihak_lainnya" id="lainnya2" class="form-control" disabled="true" placeholder="Lainnya">
 									</div>
 									<hr>
 									<h3 class="main_question"><strong>6. Nama instansi</strong></h3>
@@ -218,130 +218,130 @@
 									<h3 class="main_question"><strong>7. Keterkaitan Saudara dengan layanan peradilan</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Pemohon / Termohon / Penggugat / Tergugat
-											<input type="radio" name="keterkaitan[]" value="Pemohon/Termohon/Penggugat/Tergugat" class="required radio1" onchange="getVals(this, 'keterkaitan');">
+											<input type="radio" name="keterkaitan" value="Pemohon/Termohon/Penggugat/Tergugat" class="required radio1" onchange="getVals(this, 'keterkaitan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Kuasa Hukum / Penasehat Hukum
-											<input type="radio" name="keterkaitan[]" value="Kuasa_Hukum/Penasehat_Hukum" class="required radio3" onchange="getVals(this, 'keterkaitan');">
+											<input type="radio" name="keterkaitan" value="Kuasa_Hukum/Penasehat_Hukum" class="required radio3" onchange="getVals(this, 'keterkaitan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Saksi
-											<input type="radio" name="keterkaitan[]" value="Saksi" class="required radio3" onchange="getVals(this, 'keterkaitan');">
+											<input type="radio" name="keterkaitan" value="Saksi" class="required radio3" onchange="getVals(this, 'keterkaitan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Lainnya
-											<input type="radio" name="keterkaitan[]" value="lainnya" class="required radio3 other3" onchange="getVals(this, 'keterkaitan');">
+											<input type="radio" name="keterkaitan" value="lainnya" value="lainnya" class="required radio3 other3" onchange="getVals(this, 'keterkaitan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
-										<input type="text" name="keterkaitan[]" id="lainnya3" class="form-control" placeholder="Lainnya" disabled="true">
+										<input type="text" name="keterkaitan_lainnya" id="lainnya3" class="form-control" placeholder="Lainnya" disabled="true">
 									</div>
 									<hr>
 									<h3 class="main_question"><strong>8. Jenis layanan/keperluan</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Gugatan
-											<input type="radio" name="jenis_layanan[]" value="gugatan" class="required radio4" onchange="getVals(this, 'jenis_layanan');">
+											<input type="radio" name="jenis_layanan" value="gugatan" class="required radio4" onchange="getVals(this, 'jenis_layanan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Permohonan
-											<input type="radio" name="jenis_layanan[]" value="permohonan" class="required radio4" onchange="getVals(this, 'jenis_layanan');">
+											<input type="radio" name="jenis_layanan" value="permohonan" class="required radio4" onchange="getVals(this, 'jenis_layanan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Upaya Hukum (Banding/Kasasi/PK)
-											<input type="radio" name="jenis_layanan[]" value="upaya_hukum_(banding/kasasi/pk)" class="required radio4" onchange="getVals(this, 'jenis_layanan');">
+											<input type="radio" name="jenis_layanan" value="upaya_hukum" class="required radio4" onchange="getVals(this, 'jenis_layanan');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Lainnya
-											<input type="radio" name="jenis_layanan[]" value="lainnya" class="required radio4 other4">
+											<input type="radio" name="jenis_layanan" value="lainnya" value="lainnya" class="required radio4 other4">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
-										<input type="text" name="lainnya" id="lainnya4" class="form-control" placeholder="Lainnya" disabled="true">
+										<input type="text" name="jenis_layanan_lainnya" id="lainnya4" class="form-control" placeholder="Lainnya" disabled="true">
 									</div>
 									<hr>
 									<h3 class="main_question"><strong>9. Suku bangsa</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Alor
-											<input type="radio" name="suku_bangsa[]" value="alor)" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
+											<input type="radio" name="suku_bangsa" value="alor" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Flores
-											<input type="radio" name="suku_bangsa[]" value="flores)" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
+											<input type="radio" name="suku_bangsa" value="flores" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sabu
-											<input type="radio" name="suku_bangsa[]" value="bajawa)" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
+											<input type="radio" name="suku_bangsa" value="bajawa" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Boti
-											<input type="radio" name="suku_bangsa[]" value="boti)" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
+											<input type="radio" name="suku_bangsa" value="boti" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sumba
-											<input type="radio" name="suku_bangsa[]" value="sumba)" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
+											<input type="radio" name="suku_bangsa" value="sumba" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Manggarai
-											<input type="radio" name="suku_bangsa[]" value="manggarai)" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
+											<input type="radio" name="suku_bangsa" value="manggarai" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Rote
-											<input type="radio" name="suku_bangsa[]" value="rote)" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
+											<input type="radio" name="suku_bangsa" value="rote" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Makassar
-											<input type="radio" name="suku_bangsa[]" value="makassar)" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
+											<input type="radio" name="suku_bangsa" value="makassar" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Bugis
-											<input type="radio" name="suku_bangsa[]" value="bugis)" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
+											<input type="radio" name="suku_bangsa" value="bugis" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Jawa
-											<input type="radio" name="suku_bangsa[]" value="jawa)" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
+											<input type="radio" name="suku_bangsa" value="jawa" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Lainnya
-											<input type="radio" name="suku_bangsa[]" value="lainnya" class="required radio5 other5" onchange="getVals(this, 'suku_bangsa');">
+											<input type="radio" name="suku_bangsa" value="lainnya" value="lainnya" class="required radio5 other5" onchange="getVals(this, 'suku_bangsa');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
-										<input type="text" name="suku_bangsa[]" id="lainnya5" class="form-control" placeholder="Lainnya" disabled="true">
+										<input type="text" name="suku_bangsa_lainnya" id="lainnya5" class="form-control" placeholder="Lainnya" disabled="true">
 									</div>
 								</div>
 								<div class="step">
@@ -349,25 +349,25 @@
 									<h3 class="main_question"><strong>1. Bagaimana pendapat Saudara tentang kesesuaian persyaratan pelayanan dengan jenis pelayanannya?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak Sesuai
-											<input type="radio" name="question_1[]" value="1" class="required" onchange="getVals(this, 'question_1');">
+											<input type="radio" name="question_1" value="1" class="required" onchange="getVals(this, 'question_1');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Kurang Sesuai
-											<input type="radio" name="question_1[]" value="2" class="required" onchange="getVals(this, 'question_1');">
+											<input type="radio" name="question_1" value="2" class="required" onchange="getVals(this, 'question_1');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sesuai
-											<input type="radio" name="question_1[]" value="3" class="required" onchange="getVals(this, 'question_1');">
+											<input type="radio" name="question_1" value="3" class="required" onchange="getVals(this, 'question_1');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sangat Sesuai
-											<input type="radio" name="question_1[]" value="4" class="required" onchange="getVals(this, 'question_1');">
+											<input type="radio" name="question_1" value="4" class="required" onchange="getVals(this, 'question_1');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -375,25 +375,25 @@
 									<h3 class="main_question"><strong>2. Bagaimana sikap petugas dalam memberikan pelayanan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak Baik
-											<input type="radio" name="question_2[]" value="1" class="required" onchange="getVals(this, 'question_2');">
+											<input type="radio" name="question_2" value="1" class="required" onchange="getVals(this, 'question_2');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Cukup Baik
-											<input type="radio" name="question_2[]" value="2" class="required" onchange="getVals(this, 'question_2');">
+											<input type="radio" name="question_2" value="2" class="required" onchange="getVals(this, 'question_2');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Baik
-											<input type="radio" name="question_2[]" value="3" class="required" onchange="getVals(this, 'question_2');">
+											<input type="radio" name="question_2" value="3" class="required" onchange="getVals(this, 'question_2');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sangat Baik
-											<input type="radio" name="question_2[]" value="4" class="required" onchange="getVals(this, 'question_2');">
+											<input type="radio" name="question_2" value="4" class="required" onchange="getVals(this, 'question_2');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -401,25 +401,25 @@
 									<h3 class="main_question"><strong>3. Bagaimana pemahaman Saudara tentang kemudahan prosedur pelayanan di unit ini?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak Mudah 
-											<input type="radio" name="question_3[]" value="1" class="required" onchange="getVals(this, 'question_3');">
+											<input type="radio" name="question_3" value="1" class="required" onchange="getVals(this, 'question_3');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Kurang Mudah
-											<input type="radio" name="question_3[]" value="2" class="required" onchange="getVals(this, 'question_3');">
+											<input type="radio" name="question_3" value="2" class="required" onchange="getVals(this, 'question_3');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Mudah
-											<input type="radio" name="question_3[]" value="3" class="required" onchange="getVals(this, 'question_3');">
+											<input type="radio" name="question_3" value="3" class="required" onchange="getVals(this, 'question_3');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sangat Mudah
-											<input type="radio" name="question_3[]" value="4" class="required" onchange="getVals(this, 'question_3');">
+											<input type="radio" name="question_3" value="4" class="required" onchange="getVals(this, 'question_3');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -427,25 +427,25 @@
 									<h3 class="main_question"><strong>4. Bagaimana pendapat Saudara tentang kecepatan waktu dalam memberikan pelayanan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak Cepat
-											<input type="radio" name="question_4[]" value="1" class="required" onchange="getVals(this, 'question_4');">
+											<input type="radio" name="question_4" value="1" class="required" onchange="getVals(this, 'question_4');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Kurang Cepat
-											<input type="radio" name="question_4[]" value="2" class="required" onchange="getVals(this, 'question_4');">
+											<input type="radio" name="question_4" value="2" class="required" onchange="getVals(this, 'question_4');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Cepat
-											<input type="radio" name="question_4[]" value="3" class="required" onchange="getVals(this, 'question_4');">
+											<input type="radio" name="question_4" value="3" class="required" onchange="getVals(this, 'question_4');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sangat Cepat
-											<input type="radio" name="question_4[]" value="4" class="required" onchange="getVals(this, 'question_4');">
+											<input type="radio" name="question_4" value="4" class="required" onchange="getVals(this, 'question_4');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -453,25 +453,25 @@
 									<h3 class="main_question"><strong>5. Bagaimana pendapat Saudara tentang kesesuaian produk pelayanan antara yang tercantum dalam standar pelayanan dengan hasil yang diberikan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak Sesuai
-											<input type="radio" name="question_5[]" value="1" class="required" onchange="getVals(this, 'question_5');">
+											<input type="radio" name="question_5" value="1" class="required" onchange="getVals(this, 'question_5');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Kurang Sesuai
-											<input type="radio" name="question_5[]" value="2" class="required" onchange="getVals(this, 'question_5');">
+											<input type="radio" name="question_5" value="2" class="required" onchange="getVals(this, 'question_5');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sesuai
-											<input type="radio" name="question_5[]" value="3" class="required" onchange="getVals(this, 'question_5');">
+											<input type="radio" name="question_5" value="3" class="required" onchange="getVals(this, 'question_5');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sangat Sesuai
-											<input type="radio" name="question_5[]" value="4" class="required" onchange="getVals(this, 'question_5');">
+											<input type="radio" name="question_5" value="4" class="required" onchange="getVals(this, 'question_5');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -479,25 +479,25 @@
 									<h3 class="main_question"><strong>6. Bagaimana pendapat Saudara tentang kewajaran biaya/tarif dalam pelayanan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Sangat Mahal
-											<input type="radio" name="question_6[]" value="1" class="required" onchange="getVals(this, 'question_6');">
+											<input type="radio" name="question_6" value="1" class="required" onchange="getVals(this, 'question_6');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Cukup Mahal
-											<input type="radio" name="question_6[]" value="2" class="required" onchange="getVals(this, 'question_6');">
+											<input type="radio" name="question_6" value="2" class="required" onchange="getVals(this, 'question_6');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Mahal
-											<input type="radio" name="question_6[]" value="3" class="required" onchange="getVals(this, 'question_6');">
+											<input type="radio" name="question_6" value="3" class="required" onchange="getVals(this, 'question_6');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Gratis
-											<input type="radio" name="question_6[]" value="4" class="required" onchange="getVals(this, 'question_6');">
+											<input type="radio" name="question_6" value="4" class="required" onchange="getVals(this, 'question_6');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -505,25 +505,25 @@
 									<h3 class="main_question"><strong>7. Bagaimana pendapat Saudara tentang kompetensi/ kemampuan petugas dalam pelayanan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak Kompeten
-											<input type="radio" name="question_7[]" value="1" class="required" onchange="getVals(this, 'question_7');">
+											<input type="radio" name="question_7" value="1" class="required" onchange="getVals(this, 'question_7');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Kurang Kompeten
-											<input type="radio" name="question_7[]" value="2" class="required" onchange="getVals(this, 'question_7');">
+											<input type="radio" name="question_7" value="2" class="required" onchange="getVals(this, 'question_7');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Kompeten
-											<input type="radio" name="question_7[]" value="3" class="required" onchange="getVals(this, 'question_7');">
+											<input type="radio" name="question_7" value="3" class="required" onchange="getVals(this, 'question_7');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sangat Kompeten
-											<input type="radio" name="question_7[]" value="4" class="required" onchange="getVals(this, 'question_7');">
+											<input type="radio" name="question_7" value="4" class="required" onchange="getVals(this, 'question_7');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -531,25 +531,25 @@
 									<h3 class="main_question"><strong>8. Bagaimana pendapat saudara perilaku petugas dalam pelayanan terkait kesopanan dan keramahan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak sopan dan ramah
-											<input type="radio" name="question_8[]" value="1" class="required" onchange="getVals(this, 'question_8');">
+											<input type="radio" name="question_8" value="1" class="required" onchange="getVals(this, 'question_8');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Kurang sopan dan ramah
-											<input type="radio" name="question_8[]" value="2" class="required" onchange="getVals(this, 'question_8');">
+											<input type="radio" name="question_8" value="2" class="required" onchange="getVals(this, 'question_8');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sopan dan ramah
-											<input type="radio" name="question_8[]" value="3" class="required" onchange="getVals(this, 'question_8');">
+											<input type="radio" name="question_8" value="3" class="required" onchange="getVals(this, 'question_8');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sangat sopan dan ramah
-											<input type="radio" name="question_8[]" value="4" class="required" onchange="getVals(this, 'question_8');">
+											<input type="radio" name="question_8" value="4" class="required" onchange="getVals(this, 'question_8');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -557,25 +557,25 @@
 									<h3 class="main_question"><strong>9. Bagaimana pendapat Saudara tentang kualitas sarana dan prasarana?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Buruk
-											<input type="radio" name="question_9[]" value="1" class="required" onchange="getVals(this, 'question_9');">
+											<input type="radio" name="question_9" value="1" class="required" onchange="getVals(this, 'question_9');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Cukup
-											<input type="radio" name="question_9[]" value="2" class="required" onchange="getVals(this, 'question_9');">
+											<input type="radio" name="question_9" value="2" class="required" onchange="getVals(this, 'question_9');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Baik
-											<input type="radio" name="question_9[]" value="3" class="required" onchange="getVals(this, 'question_9');">
+											<input type="radio" name="question_9" value="3" class="required" onchange="getVals(this, 'question_9');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sangat Baik
-											<input type="radio" name="question_9[]" value="4" class="required" onchange="getVals(this, 'question_9');">
+											<input type="radio" name="question_9" value="4" class="required" onchange="getVals(this, 'question_9');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -583,25 +583,25 @@
 									<h3 class="main_question"><strong>10. Bagaimana pendapat Saudara tentang penanganan pengaduan pengguna layanan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak Ada
-											<input type="radio" name="question_10[]" value="1" class="required" onchange="getVals(this, 'question_10');">
+											<input type="radio" name="question_10" value="1" class="required" onchange="getVals(this, 'question_10');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Ada tetapi tidak berfungsi
-											<input type="radio" name="question_10[]" value="2" class="required" onchange="getVals(this, 'question_10');">
+											<input type="radio" name="question_10" value="2" class="required" onchange="getVals(this, 'question_10');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Berfungsi kurang maksimal
-											<input type="radio" name="question_10[]" value="3" class="required" onchange="getVals(this, 'question_10');">
+											<input type="radio" name="question_10" value="3" class="required" onchange="getVals(this, 'question_10');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Dikelola dengan baik
-											<input type="radio" name="question_10[]" value="4" class="required" onchange="getVals(this, 'question_10');">
+											<input type="radio" name="question_10" value="4" class="required" onchange="getVals(this, 'question_10');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -612,25 +612,25 @@
 									<h3 class="main_question"><strong>1. Apakah pelayanan oleh petugas di Pengadilan sesuai prosedur dan ketentuan yang berlaku?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak sesuai prosedur
-											<input type="radio" name="question_11[]" value="1" class="required" onchange="getVals(this, 'question_11');">
+											<input type="radio" name="question_11" value="1" class="required" onchange="getVals(this, 'question_11');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Jarang sesuai prosedur
-											<input type="radio" name="question_11[]" value="2" class="required" onchange="getVals(this, 'question_11');">
+											<input type="radio" name="question_11" value="2" class="required" onchange="getVals(this, 'question_11');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sering sesuai prosedur
-											<input type="radio" name="question_11[]" value="3" class="required" onchange="getVals(this, 'question_11');">
+											<input type="radio" name="question_11" value="3" class="required" onchange="getVals(this, 'question_11');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu sesuai prosedur
-											<input type="radio" name="question_11[]" value="4" class="required" onchange="getVals(this, 'question_11');">
+											<input type="radio" name="question_11" value="4" class="required" onchange="getVals(this, 'question_11');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -638,25 +638,25 @@
 									<h3 class="main_question"><strong>2. Apakah dalam memperoleh layanan Pengadilan secara cepat dan mudah ada penyalahgunaan jabatan dari petugas untuk meminta imbalan tertentu?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">petugas melayani selalu meminta imbalan
-											<input type="radio" name="question_12[]" value="1" class="required" onchange="getVals(this, 'question_12');">
+											<input type="radio" name="question_12" value="1" class="required" onchange="getVals(this, 'question_12');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">petugas melayani sering meminta imbalan
-											<input type="radio" name="question_12[]" value="2" class="required" onchange="getVals(this, 'question_12');">
+											<input type="radio" name="question_12" value="2" class="required" onchange="getVals(this, 'question_12');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">petugas melayani jarang meminta imbalan
-											<input type="radio" name="question_12[]" value="3" class="required" onchange="getVals(this, 'question_12');">
+											<input type="radio" name="question_12" value="3" class="required" onchange="getVals(this, 'question_12');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">petugas melayani tanpa meminta imbalan
-											<input type="radio" name="question_12[]" value="4" class="required" onchange="getVals(this, 'question_12');">
+											<input type="radio" name="question_12" value="4" class="required" onchange="getVals(this, 'question_12');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -664,25 +664,25 @@
 									<h3 class="main_question"><strong>3. Pernahkah dihubungi oleh seseorang ( karyawan Pengadilan ) yang akan membantu dalam pengurusan surat / berkas perkara?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu
-											<input type="radio" name="question_13[]" value="1" class="required" onchange="getVals(this, 'question_13');">
+											<input type="radio" name="question_13" value="1" class="required" onchange="getVals(this, 'question_13');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sering
-											<input type="radio" name="question_13[]" value="2" class="required" onchange="getVals(this, 'question_13');">
+											<input type="radio" name="question_13" value="2" class="required" onchange="getVals(this, 'question_13');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Jarang
-											<input type="radio" name="question_13[]" value="3" class="required" onchange="getVals(this, 'question_13');">
+											<input type="radio" name="question_13" value="3" class="required" onchange="getVals(this, 'question_13');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak ada
-											<input type="radio" name="question_13[]" value="4" class="required" onchange="getVals(this, 'question_13');">
+											<input type="radio" name="question_13" value="4" class="required" onchange="getVals(this, 'question_13');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -690,25 +690,25 @@
 									<h3 class="main_question"><strong>4. Apakah selalu mudah dalam mendapatkan informasi tentang tarif/biaya baik melalui website ataupun petugas layanan di Pengadilan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak pernah
-											<input type="radio" name="question_14[]" value="1" class="required" onchange="getVals(this, 'question_14');">
+											<input type="radio" name="question_14" value="1" class="required" onchange="getVals(this, 'question_14');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Jarang
-											<input type="radio" name="question_14[]" value="2" class="required" onchange="getVals(this, 'question_14');">
+											<input type="radio" name="question_14" value="2" class="required" onchange="getVals(this, 'question_14');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sering
-											<input type="radio" name="question_14[]" value="3" class="required" onchange="getVals(this, 'question_14');">
+											<input type="radio" name="question_14" value="3" class="required" onchange="getVals(this, 'question_14');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu
-											<input type="radio" name="question_14[]" value="4" class="required" onchange="getVals(this, 'question_14');">
+											<input type="radio" name="question_14" value="4" class="required" onchange="getVals(this, 'question_14');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -716,25 +716,25 @@
 									<h3 class="main_question"><strong>5. Apakah di Pengadilan selalu membayar sesuai tarif resmi tanpa ada biaya tambahan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak pernah
-											<input type="radio" name="question_15[]" value="1" class="required" onchange="getVals(this, 'question_15');">
+											<input type="radio" name="question_15" value="1" class="required" onchange="getVals(this, 'question_15');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Jarang
-											<input type="radio" name="question_15[]" value="2" class="required" onchange="getVals(this, 'question_15');">
+											<input type="radio" name="question_15" value="2" class="required" onchange="getVals(this, 'question_15');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sering
-											<input type="radio" name="question_15[]" value="3" class="required" onchange="getVals(this, 'question_15');">
+											<input type="radio" name="question_15" value="3" class="required" onchange="getVals(this, 'question_15');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu
-											<input type="radio" name="question_15[]" value="4" class="required" onchange="getVals(this, 'question_15');">
+											<input type="radio" name="question_15" value="4" class="required" onchange="getVals(this, 'question_15');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -742,25 +742,25 @@
 									<h3 class="main_question"><strong>6. Apakah memberikan tanda terima kasih atas layanan yang diterima di Pengadilan ( meskipun tidak diminta )?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu
-											<input type="radio" name="question_16[]" value="1" class="required" onchange="getVals(this, 'question_16');">
+											<input type="radio" name="question_16" value="1" class="required" onchange="getVals(this, 'question_16');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sering
-											<input type="radio" name="question_16[]" value="2" class="required" onchange="getVals(this, 'question_16');">
+											<input type="radio" name="question_16" value="2" class="required" onchange="getVals(this, 'question_16');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Jarang
-											<input type="radio" name="question_16[]" value="3" class="required" onchange="getVals(this, 'question_16');">
+											<input type="radio" name="question_16" value="3" class="required" onchange="getVals(this, 'question_16');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak ada
-											<input type="radio" name="question_16[]" value="4" class="required" onchange="getVals(this, 'question_16');">
+											<input type="radio" name="question_16" value="4" class="required" onchange="getVals(this, 'question_16');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -768,25 +768,25 @@
 									<h3 class="main_question"><strong>7. Apakah menerima bukti transaksi keuangan / pembayaran yang sah setelah proses pembayaran di Pengadilan dilakukan? ( Untuk pelayanan yang dipungut biaya / PNBP )</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak pernah
-											<input type="radio" name="question_17[]" value="1" class="required" onchange="getVals(this, 'question_17');">
+											<input type="radio" name="question_17" value="1" class="required" onchange="getVals(this, 'question_17');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Jarang
-											<input type="radio" name="question_17[]" value="2" class="required" onchange="getVals(this, 'question_17');">
+											<input type="radio" name="question_17" value="2" class="required" onchange="getVals(this, 'question_17');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sering
-											<input type="radio" name="question_17[]" value="3" class="required" onchange="getVals(this, 'question_17');">
+											<input type="radio" name="question_17" value="3" class="required" onchange="getVals(this, 'question_17');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu
-											<input type="radio" name="question_17[]" value="4" class="required" onchange="getVals(this, 'question_17');">
+											<input type="radio" name="question_17" value="4" class="required" onchange="getVals(this, 'question_17');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -794,25 +794,25 @@
 									<h3 class="main_question"><strong>8. Apakah pernah mengetahui ada praktek percaloan dalam pengurusan layanan di Pengadilan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu
-											<input type="radio" name="question_18[]" value="1" class="required" onchange="getVals(this, 'question_18');">
+											<input type="radio" name="question_18" value="1" class="required" onchange="getVals(this, 'question_18');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sering
-											<input type="radio" name="question_18[]" value="2" class="required" onchange="getVals(this, 'question_18');">
+											<input type="radio" name="question_18" value="2" class="required" onchange="getVals(this, 'question_18');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Jarang
-											<input type="radio" name="question_18[]" value="3" class="required" onchange="getVals(this, 'questiquestion_18on_2');">
+											<input type="radio" name="question_18" value="3" class="required" onchange="getVals(this, 'questiquestion_18on_2');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak ada
-											<input type="radio" name="question_18[]" value="4" class="required" onchange="getVals(this, 'question_18');">
+											<input type="radio" name="question_18" value="4" class="required" onchange="getVals(this, 'question_18');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -820,25 +820,25 @@
 									<h3 class="main_question"><strong>9. Apakah pernah melihat dan atau mendengar masih terjadi praktek KKN di Pengadilan ?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu
-											<input type="radio" name="question_19[]" value="1" class="required" onchange="getVals(this, 'question_19');">
+											<input type="radio" name="question_19" value="1" class="required" onchange="getVals(this, 'question_19');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sering
-											<input type="radio" name="question_19[]" value="2" class="required" onchange="getVals(this, 'question_19');">
+											<input type="radio" name="question_19" value="2" class="required" onchange="getVals(this, 'question_19');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Jarang
-											<input type="radio" name="question_19[]" value="3" class="required" onchange="getVals(this, 'question_19');">
+											<input type="radio" name="question_19" value="3" class="required" onchange="getVals(this, 'question_19');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak ada
-											<input type="radio" name="question_19[]" value="4" class="required" onchange="getVals(this, 'question_19');">
+											<input type="radio" name="question_19" value="4" class="required" onchange="getVals(this, 'question_19');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -846,25 +846,25 @@
 									<h3 class="main_question"><strong>10. Apakah pernah mengurus perkara melalui Hakim / Panitera / Staff Pengadilan diluar persidangan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu
-											<input type="radio" name="question_20[]" value="1" class="required" onchange="getVals(this, 'question_20');">
+											<input type="radio" name="question_20" value="1" class="required" onchange="getVals(this, 'question_20');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Sering
-											<input type="radio" name="question_20[]" value="2" class="required" onchange="getVals(this, 'question_20');">
+											<input type="radio" name="question_20" value="2" class="required" onchange="getVals(this, 'question_20');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Jarang
-											<input type="radio" name="question_20[]" value="3" class="required" onchange="getVals(this, 'question_20');">
+											<input type="radio" name="question_20" value="3" class="required" onchange="getVals(this, 'question_20');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak ada
-											<input type="radio" name="question_20[]" value="4" class="required" onchange="getVals(this, 'question_20');">
+											<input type="radio" name="question_20" value="4" class="required" onchange="getVals(this, 'question_20');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -940,7 +940,6 @@
 	<script src="js/pw_strenght.js"></script>
 
 	<!-- Wizard script -->
-	<script src="js/quotation_func.js"></script>
 	<script src="js/registration_func.js"></script>
 
 	<script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "9XwwgTuanQ");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
@@ -957,17 +956,17 @@
 		});
 	</script>
 	<script>
-		$('.required').change(function() {
+		$('.radio3').change(function() {
   		$('#lainnya3').prop('disabled', !$(this).is('.other3'));
 		});
 	</script>
 	<script>
-		$('.required').change(function() {
+		$('.radio4').change(function() {
   		$('#lainnya4').prop('disabled', !$(this).is('.other4'));
 		});
 	</script>
 	<script>
-		$('.required').change(function() {
+		$('.radio5').change(function() {
   		$('#lainnya5').prop('disabled', !$(this).is('.other5'));
 		});
 	</script>
