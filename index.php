@@ -59,7 +59,7 @@
 		<div class="row row-height">
 			<div class="col-lg-6 content-left">
 				<div class="content-left-wrapper">
-						<a href="index.html" id="logo"><img src="img/logo.png" alt="" width="49" height="35"></a>
+					<a href="index.html" id="logo"><img src="img/logo.png" alt="" width="49" height="35"></a>
 					<div id="social">
 						<ul>
 							<li><a href="#0"><i class="icon-facebook"></i></a></li>
@@ -70,8 +70,8 @@
 					</div>
 					<!-- /social -->
 					<div>
-						<figure><img src="img/info_graphic_5.svg" alt="" class="img-fluid"></figure>
-						<h2>Review Wizard</h2>
+						<figure><img src="img/info_graphic_3.svg" alt="" class="img-fluid"></figure>
+						<h2>Quotation Wizard</h2>
 						<p>Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas concludaturque usu, facete detracto patrioque an per, lucilius pertinacia eu vel. Adhuc invidunt duo ex. Eu tantas dolorum ullamcorper qui.</p>
 						<a href="#0" class="btn_1 rounded">Purchase this template</a>
 						<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
@@ -88,12 +88,108 @@
 							<div id="progressbar"></div>
 						</div>
 						<!-- /top-wizard -->
-						<form id="wrapped" method="POST">
+						<form id="wrapped" method="POST" enctype="multipart/form-data" action="simpan.php">
 							<input id="website" name="website" type="text" value="">
 							<!-- Leave for security protection, read docs for details -->
 							<div id="middle-wizard">
 								<div class="step">
-								<h3 class="main_question"><strong>2/4</strong>Indeks Pelayanan Publik</h3>
+									<h3 class="main_question"><strong>1/4</strong>Please fill with your details</h3>
+									<div class="form-group">
+										<div class="styled-select clearfix">
+											<select class="wide required" name="jenis_kelamin" onchange="getVals(this, 'jenis_kelamin');">
+												<option value="">Jenis Kelamin</option>
+												<option value="Laki-Laki">Laki-Laki</option>                    
+												<option value="Perempuan">Perempuan</option>                    
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="styled-select clearfix">
+											<select class="wide required" name="pendidikan" onchange="getVals(this, 'pendidikan');">
+												<option disabled selected value="">Pendidikan</option>
+												<option value="sd">SD (Sekolah Dasar)/Sederajat</option>                   
+												<option value="smp">SMP (Sekolah Menengah Pertama)/Sederajat</option>                   
+												<option value="sma">SMA (Sekolah Menengah Atas)/Sederajat</option>                   
+												<option value="diploma">D1/D2/D3/D4 (Diploma)</option>                   
+												<option value="s1">S1 (Sarjana)</option>                   
+												<option value="s2">S2 (Magister)</option>                   
+												<option value="s3">S3 (Doktor)</option>                   
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<input type="text" name="usia" class="form-control required" placeholder="Usia" onchange="getVals(this, 'usia');">
+									</div>
+									<div class="form-group">
+										<div class="styled-select clearfix">
+											<select class="wide required" name="pekerjaan" onchange="getVals(this, 'pekerjaan');">
+												<option disabled selected value="">Pekerjaan</option>                             
+												<option value="PNS / TNI / POLRI">PNS / TNI / POLRI</option>                             
+												<option value="Pegawai Swasta">Pegawai Swasta</option>                             
+												<option value="Wiraswasta / Pengusaha">Wiraswasta / Pengusaha</option>                             
+												<option value="Pelajar / Mahasiswa">Pelajar / Mahasiswa</option>                             
+												<option value="Lainnya">Lainnya</option>                            
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="styled-select clearfix">
+											<select class="wide required" name="pihak" onchange="getVals(this, 'pihak');">
+												<option disabled selected value="">Untuk Pihak Siapa Saudara/i Menggunakan Layanan?</option>                             
+												<option value="Diri Sendiri">Diri Sendiri (Pribadi/Instansi)</option>                             
+												<option value="Orang Lain">Orang Lain (Kuasa/Kuasa Hukum/Pengacara)</option>                                                       
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<input type="text" name="instansi" class="form-control required" placeholder="Nama Instansi" onchange="getVals(this, 'instansi');">
+									</div>
+									<div class="form-group">
+										<div class="styled-select clearfix">
+											<select class="wide required" name="pihak2" onchange="getVals(this, 'pihak2');">
+												<option disabled selected value="">Keterkaitan Saudara/i dengan Layanan Peradilan</option>                             
+												<option value="Pemohon / Termohon / Penggugat / Tergugat">Pemohon / Termohon / Penggugat / Tergugat</option>                             
+												<option value="Kuasa Hukum / Penasehat Hukum">Kuasa Hukum / Penasehat Hukum</option>                                                       
+												<option value="Saksi">Saksi</option>                                                       
+												<option value="Lainnya">Lainnya</option>                                                       
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="styled-select clearfix">
+											<select class="wide required" name="layanan" onchange="getVals(this, 'layanan');">
+												<option disabled selected value="">Jenis Layanan / Keperluan</option>                             
+												<option value="Gugatan">Gugatan</option>                             
+												<option value="Permohonan">Permohonan</option>                                                       
+												<option value="Upaya Hukum">Upaya Hukum (Banding/Kasasi/PK)</option>                                                       
+												<option value="Lainnya">Lainnya</option>                                                       
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="styled-select clearfix">
+											<select class="wide required" name="suku" onchange="getVals(this, 'suku');">
+												<option disabled selected value="">Suku Bangsa</option>                             
+												<option value="Alor">Alor</option>                             
+												<option value="Flores">Flores</option>                                                     
+												<option value="Bajawa">Bajawa</option>                                                     
+												<option value="Boti">Boti</option>                                                     
+												<option value="Sumba">Sumba</option>                                                     
+												<option value="Ende">Ende</option>                                                     
+												<option value="Manggarai">Manggarai</option>                                                     
+												<option value="Rote">Rote</option>                                                     
+												<option value="Lamaholot">Lamaholot</option>                                                     
+												<option value="Makassar">Makassar</option>                                                     
+												<option value="Bugis">Bugis</option>                                                     
+												<option value="Jawa">Jawa</option>                                                     
+												<option value="Lainnya">Lainnya</option>                                                     
+											</select>
+										</div>
+									</div>
+								</div>
+								
+								<div class="step">
+									<h3 class="main_question"><strong>2/4</strong>Indeks Pelayanan Publik</h3>
 									<h3 class="main_question"><strong>1. Bagaimana pendapat Saudara tentang kesesuaian persyaratan pelayanan dengan jenis pelayanannya?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak Sesuai
@@ -354,9 +450,10 @@
 										</label>
 									</div>
 								</div>
+
 								<div class="step">
-								<h3 class="main_question"><strong>3/4</strong>Indeks Pelayanan Publik</h3>			
-									<h3 class="main_question"><strong>11. Apakah pelayanan oleh petugas di Pengadilan sesuai prosedur dan ketentuan yang berlaku?</strong></h3>
+									<h3 class="main_question"><strong>3/4</strong>Indeks Persepsi Anti Korupsi</h3>			
+									<h3 class="main_question"><strong>1. Apakah pelayanan oleh petugas di Pengadilan sesuai prosedur dan ketentuan yang berlaku?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak sesuai prosedur
 											<input type="radio" name="question_11[]" value="1" class="required" onchange="getVals(this, 'question_11');">
@@ -382,7 +479,7 @@
 										</label>
 									</div>
 
-									<h3 class="main_question"><strong>12. Apakah dalam memperoleh layanan Pengadilan secara cepat dan mudah ada penyalahgunaan jabatan dari petugas untuk meminta imbalan tertentu?</strong></h3>
+									<h3 class="main_question"><strong>2. Apakah dalam memperoleh layanan Pengadilan secara cepat dan mudah ada penyalahgunaan jabatan dari petugas untuk meminta imbalan tertentu?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">petugas melayani selalu meminta imbalan
 											<input type="radio" name="question_12[]" value="1" class="required" onchange="getVals(this, 'question_12');">
@@ -408,7 +505,7 @@
 										</label>
 									</div>
 
-									<h3 class="main_question"><strong>13. Pernahkah dihubungi oleh seseorang ( karyawan Pengadilan ) yang akan membantu dalam pengurusan surat / berkas perkara?</strong></h3>
+									<h3 class="main_question"><strong>3. Pernahkah dihubungi oleh seseorang ( karyawan Pengadilan ) yang akan membantu dalam pengurusan surat / berkas perkara?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu
 											<input type="radio" name="question_13[]" value="1" class="required" onchange="getVals(this, 'question_13');">
@@ -434,7 +531,7 @@
 										</label>
 									</div>
 
-									<h3 class="main_question"><strong>14. Apakah selalu mudah dalam mendapatkan informasi tentang tarif/biaya baik melalui website ataupun petugas layanan di Pengadilan?</strong></h3>
+									<h3 class="main_question"><strong>4. Apakah selalu mudah dalam mendapatkan informasi tentang tarif/biaya baik melalui website ataupun petugas layanan di Pengadilan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak pernah
 											<input type="radio" name="question_14[]" value="1" class="required" onchange="getVals(this, 'question_14');">
@@ -460,7 +557,7 @@
 										</label>
 									</div>
 
-									<h3 class="main_question"><strong>15. Apakah di Pengadilan selalu membayar sesuai tarif resmi tanpa ada biaya tambahan?</strong></h3>
+									<h3 class="main_question"><strong>5. Apakah di Pengadilan selalu membayar sesuai tarif resmi tanpa ada biaya tambahan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak pernah
 											<input type="radio" name="question_15[]" value="1" class="required" onchange="getVals(this, 'question_15');">
@@ -486,7 +583,7 @@
 										</label>
 									</div>
 
-									<h3 class="main_question"><strong>16. Apakah memberikan tanda terima kasih atas layanan yang diterima di Pengadilan ( meskipun tidak diminta )?</strong></h3>
+									<h3 class="main_question"><strong>6. Apakah memberikan tanda terima kasih atas layanan yang diterima di Pengadilan ( meskipun tidak diminta )?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu
 											<input type="radio" name="question_16[]" value="1" class="required" onchange="getVals(this, 'question_16');">
@@ -512,7 +609,7 @@
 										</label>
 									</div>
 
-									<h3 class="main_question"><strong>17. Apakah menerima bukti transaksi keuangan / pembayaran yang sah setelah proses pembayaran di Pengadilan dilakukan? ( Untuk pelayanan yang dipungut biaya / PNBP )</strong></h3>
+									<h3 class="main_question"><strong>7. Apakah menerima bukti transaksi keuangan / pembayaran yang sah setelah proses pembayaran di Pengadilan dilakukan? ( Untuk pelayanan yang dipungut biaya / PNBP )</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Tidak pernah
 											<input type="radio" name="question_17[]" value="1" class="required" onchange="getVals(this, 'question_17');">
@@ -533,12 +630,12 @@
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu
-											<input type="radio" name="question_1700[]" value="4" class="required" onchange="getVals(this, 'question_17');">
+											<input type="radio" name="question_17[]" value="4" class="required" onchange="getVals(this, 'question_17');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 
-									<h3 class="main_question"><strong>18. Apakah pernah mengetahui ada praktek percaloan dalam pengurusan layanan di Pengadilan?</strong></h3>
+									<h3 class="main_question"><strong>8. Apakah pernah mengetahui ada praktek percaloan dalam pengurusan layanan di Pengadilan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu
 											<input type="radio" name="question_18[]" value="1" class="required" onchange="getVals(this, 'question_18');">
@@ -564,7 +661,7 @@
 										</label>
 									</div>
 
-									<h3 class="main_question"><strong>19. Apakah pernah melihat dan atau mendengar masih terjadi praktek KKN di Pengadilan ?</strong></h3>
+									<h3 class="main_question"><strong>9. Apakah pernah melihat dan atau mendengar masih terjadi praktek KKN di Pengadilan ?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu
 											<input type="radio" name="question_19[]" value="1" class="required" onchange="getVals(this, 'question_19');">
@@ -590,7 +687,7 @@
 										</label>
 									</div>
 
-									<h3 class="main_question"><strong>20. Apakah pernah mengurus perkara melalui Hakim / Panitera / Staff Pengadilan diluar persidangan?</strong></h3>
+									<h3 class="main_question"><strong>10. Apakah pernah mengurus perkara melalui Hakim / Panitera / Staff Pengadilan diluar persidangan?</strong></h3>
 									<div class="form-group">
 										<label class="container_check version_2">Selalu
 											<input type="radio" name="question_20[]" value="1" class="required" onchange="getVals(this, 'question_20');">
@@ -616,231 +713,18 @@
 										</label>
 									</div>
 								</div>
-								<div class="step">
-									<h3 class="main_question"><strong>4/8</strong>Indeks Pelayanan Publik</h3>
-									<div class="form-group rating_wp clearfix">
-												<label class="rating_type">9. Bagaimana pendapat Saudara tentang kualitas sarana dan prasarana?</label>
-												<span class="rating">
-												<input type="radio" class="required rating-input" id="rating-input-9-4" name="rating_input_9" value="4 Stars" onchange="getVals(this, 'rating_input_9');">
-												<label for="rating-input-9-4" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-9-3" name="rating_input_9" value="3 Stars" onchange="getVals(this, 'rating_input_9');">
-												<label for="rating-input-9-3" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-9-2" name="rating_input_9" value="2 Stars" onchange="getVals(this, 'rating_input_9');">
-												<label for="rating-input-9-2" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-9-1" name="rating_input_9" value="1 Star" onchange="getVals(this, 'rating_input_9');">
-												<label for="rating-input-9-1" class="rating-star"></label>
-												</span>
-											</div>
-											<div class="form-group rating_wp clearfix">
-												<label class="rating_type">10. Bagaimana pendapat Saudara tentang penanganan pengaduan pengguna layanan?</label>
-												<span class="rating">
-												<input type="radio" class="required rating-input" id="rating-input-10-4" name="rating_input_10" value="4 Stars" onchange="getVals(this, 'rating_input_10');">
-												<label for="rating-input-10-4" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-10-3" name="rating_input_10" value="3 Stars" onchange="getVals(this, 'rating_input_10');">
-												<label for="rating-input-10-3" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-10-2" name="rating_input_10" value="2 Stars" onchange="getVals(this, 'rating_input_10');">
-												<label for="rating-input-10-2" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-10-1" name="rating_input_10" value="1 Star" onchange="getVals(this, 'rating_input_10');">
-												<label for="rating-input-10-1" class="rating-star"></label>
-												</span>
-											</div>
-								</div>
-								
-								<div class="step">
-									<h3 class="main_question"><strong>5/8</strong>Indeks Pelayanan Anti Korupsi</h3>
-											<div class="form-group rating_wp clearfix">
-												<label class="rating_type">1. Apakah pelayanan oleh petugas di Pengadilan sesuai prosedur dan ketentuan yang berlaku?</label>
-												<span class="rating">
-												<input type="radio" class="required rating-input" id="rating-input-11-4" name="rating_input_11" value="4 Stars" onchange="getVals(this, 'rating_input_11');">
-												<label for="rating-input-11-4" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-11-3" name="rating_input_11" value="3 Stars" onchange="getVals(this, 'rating_input_11');">
-												<label for="rating-input-11-3" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-11-2" name="rating_input_11" value="2 Stars" onchange="getVals(this, 'rating_input_11');">
-												<label for="rating-input-11-2" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-11-1" name="rating_input_11" value="1 Star" onchange="getVals(this, 'rating_input_11');">
-												<label for="rating-input-11-1" class="rating-star"></label>
-												</span>
-											</div>
-											<div class="form-group rating_wp clearfix">
-												<label class="rating_type">2. Apakah dalam memperoleh layanan Pengadilan secara cepat dan mudah ada penyalahgunaan jabatan dari petugas untuk meminta imbalan tertentu?</label>
-												<span class="rating">
-												<input type="radio" class="required rating-input" id="rating-input-12-4" name="rating_input_12" value="4 Stars" onchange="getVals(this, 'rating_input_12');">
-												<label for="rating-input-12-4" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-12-3" name="rating_input_12" value="3 Stars" onchange="getVals(this, 'rating_input_12');">
-												<label for="rating-input-12-3" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-12-2" name="rating_input_12" value="2 Stars" onchange="getVals(this, 'rating_input_12');">
-												<label for="rating-input-12-2" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-12-1" name="rating_input_12" value="1 Star" onchange="getVals(this, 'rating_input_12');">
-												<label for="rating-input-12-1" class="rating-star"></label>
-												</span>
-											</div>
-											<div class="form-group rating_wp clearfix">
-												<label class="rating_type">3. Pernahkah dihubungi oleh seseorang ( karyawan Pengadilan ) yang akan membantu dalam pengurusan surat / berkas perkara?</label>
-												<span class="rating">
-												<input type="radio" class="required rating-input" id="rating-input-13-4" name="rating_input_13" value="4 Stars" onchange="getVals(this, 'rating_input_13');">
-												<label for="rating-input-13-4" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-13-3" name="rating_input_13" value="3 Stars" onchange="getVals(this, 'rating_input_13');">
-												<label for="rating-input-13-3" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-13-2" name="rating_input_13" value="2 Stars" onchange="getVals(this, 'rating_input_13');">
-												<label for="rating-input-13-2" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-13-1" name="rating_input_13" value="1 Star" onchange="getVals(this, 'rating_input_13');">
-												<label for="rating-input-13-1" class="rating-star"></label>
-												</span>
-											</div>
-											<div class="form-group rating_wp clearfix">
-												<label class="rating_type">4. Apakah selalu mudah dalam mendapatkan informasi tentang tarif/biaya baik melalui website ataupun petugas layanan di Pengadilan?</label>
-												<span class="rating">
-												<input type="radio" class="required rating-input" id="rating-input-14-4" name="rating_input_14" value="4 Stars" onchange="getVals(this, 'rating_input_14');">
-												<label for="rating-input-14-4" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-14-3" name="rating_input_14" value="3 Stars" onchange="getVals(this, 'rating_input_14');">
-												<label for="rating-input-14-3" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-14-2" name="rating_input_14" value="2 Stars" onchange="getVals(this, 'rating_input_14');">
-												<label for="rating-input-14-2" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-14-1" name="rating_input_14" value="1 Star" onchange="getVals(this, 'rating_input_14');">
-												<label for="rating-input-14-1" class="rating-star"></label>
-												</span>
-											</div>
-								</div>
-								
-								<div class="step">
-									<h3 class="main_question"><strong>6/8</strong>Indeks Pelayanan Anti Korupsi</h3>
-											<div class="form-group rating_wp clearfix">
-												<label class="rating_type">5. Apakah di Pengadilan selalu membayar sesuai tarif resmi tanpa ada biaya tambahan?</label>
-												<span class="rating">
-												<input type="radio" class="required rating-input" id="rating-input-15-4" name="rating_input_15" value="4 Stars" onchange="getVals(this, 'rating_input_15');">
-												<label for="rating-input-15-4" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-15-3" name="rating_input_15" value="3 Stars" onchange="getVals(this, 'rating_input_15');">
-												<label for="rating-input-15-3" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-15-2" name="rating_input_15" value="2 Stars" onchange="getVals(this, 'rating_input_15');">
-												<label for="rating-input-15-2" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-15-1" name="rating_input_15" value="1 Star" onchange="getVals(this, 'rating_input_15');">
-												<label for="rating-input-15-1" class="rating-star"></label>
-												</span>
-											</div>
-											<div class="form-group rating_wp clearfix">
-												<label class="rating_type">6. Apakah memberikan tanda terima kasih atas layanan yang diterima di Pengadilan ( meskipun tidak diminta )?</label>
-												<span class="rating">
-												<input type="radio" class="required rating-input" id="rating-input-16-4" name="rating_input_16" value="4 Stars" onchange="getVals(this, 'rating_input_16');">
-												<label for="rating-input-16-4" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-16-3" name="rating_input_16" value="3 Stars" onchange="getVals(this, 'rating_input_16');">
-												<label for="rating-input-16-3" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-16-2" name="rating_input_16" value="2 Stars" onchange="getVals(this, 'rating_input_16');">
-												<label for="rating-input-16-2" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-16-1" name="rating_input_16" value="1 Star" onchange="getVals(this, 'rating_input_16');">
-												<label for="rating-input-16-1" class="rating-star"></label>
-												</span>
-											</div>
-											<div class="form-group rating_wp clearfix">
-												<label class="rating_type">7. Apakah menerima bukti transaksi keuangan / pembayaran yang sah setelah proses pembayaran di Pengadilan dilakukan ? ( Untuk pelayanan yang dipungut biaya / PNBP )</label>
-												<span class="rating">
-												<input type="radio" class="required rating-input" id="rating-input-17-4" name="rating_input_17" value="4 Stars" onchange="getVals(this, 'rating_input_17');">
-												<label for="rating-input-17-4" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-17-3" name="rating_input_17" value="3 Stars" onchange="getVals(this, 'rating_input_17');">
-												<label for="rating-input-17-3" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-17-2" name="rating_input_17" value="2 Stars" onchange="getVals(this, 'rating_input_17');">
-												<label for="rating-input-17-2" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-17-1" name="rating_input_17" value="1 Star" onchange="getVals(this, 'rating_input_17');">
-												<label for="rating-input-17-1" class="rating-star"></label>
-												</span>
-											</div>
-											<div class="form-group rating_wp clearfix">
-												<label class="rating_type">8. Apakah pernah mengetahui ada praktek percaloan dalam pengurusan layanan di Pengadilan?</label>
-												<span class="rating">
-												<input type="radio" class="required rating-input" id="rating-input-18-4" name="rating_input_18" value="4 Stars" onchange="getVals(this, 'rating_input_18');">
-												<label for="rating-input-18-4" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-18-3" name="rating_input_18" value="3 Stars" onchange="getVals(this, 'rating_input_18');">
-												<label for="rating-input-18-3" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-18-2" name="rating_input_18" value="2 Stars" onchange="getVals(this, 'rating_input_18');">
-												<label for="rating-input-18-2" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-18-1" name="rating_input_18" value="1 Star" onchange="getVals(this, 'rating_input_18');">
-												<label for="rating-input-18-1" class="rating-star"></label>
-												</span>
-											</div>
-								</div>
-
-								<div class="step">
-									<h3 class="main_question"><strong>7/8</strong>Indeks Pelayanan Anti Korupsi</h3>
-											<div class="form-group rating_wp clearfix">
-												<label class="rating_type">9. Apakah pernah melihat dan atau mendengar masih terjadi praktek KKN di Pengadilan?</label>
-												<span class="rating">
-												<input type="radio" class="required rating-input" id="rating-input-19-4" name="rating_input_19" value="4 Stars" onchange="getVals(this, 'rating_input_19');">
-												<label for="rating-input-19-4" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-19-3" name="rating_input_19" value="3 Stars" onchange="getVals(this, 'rating_input_19');">
-												<label for="rating-input-19-3" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-19-2" name="rating_input_19" value="2 Stars" onchange="getVals(this, 'rating_input_19');">
-												<label for="rating-input-19-2" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-19-1" name="rating_input_19" value="1 Star" onchange="getVals(this, 'rating_input_19');">
-												<label for="rating-input-19-1" class="rating-star"></label>
-												</span>
-											</div>
-											<div class="form-group rating_wp clearfix">
-												<label class="rating_type">10. Apakah pernah mengurus perkara melalui Hakim / Panitera / Staff Pengadilan diluar persidangan?</label>
-												<span class="rating">
-												<input type="radio" class="required rating-input" id="rating-input-20-4" name="rating_input_20" value="4 Stars" onchange="getVals(this, 'rating_input_20');">
-												<label for="rating-input-20-4" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-20-3" name="rating_input_20" value="3 Stars" onchange="getVals(this, 'rating_input_20');">
-												<label for="rating-input-20-3" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-20-2" name="rating_input_20" value="2 Stars" onchange="getVals(this, 'rating_input_20');">
-												<label for="rating-input-20-2" class="rating-star"></label>
-												<input type="radio" class="required rating-input" id="rating-input-20-1" name="rating_input_20" value="1 Star" onchange="getVals(this, 'rating_input_20');">
-												<label for="rating-input-20-1" class="rating-star"></label>
-												</span>
-											</div>
-								</div>
-
-								<div class="step">
-									<h3 class="main_question"><strong>8/8</strong>Your review and comments</h3>
-									<div class="form-group add_top_30">
-										<textarea name="review_message" class="form-control review_message required" placeholder="Write your review here..." onkeyup="getVals(this, 'review_message');"></textarea>
-									</div>
-								</div>
-
-								<div class="step">
-									<h3 class="main_question"><strong>4/5</strong>Please fill with your details</h3>
-									<div class="form-group">
-										<input type="text" name="firstname" class="form-control required" placeholder="First Name">
-									</div>
-									<div class="form-group">
-										<input type="text" name="lastname" class="form-control required" placeholder="Last Name">
-									</div>
-									<div class="form-group">
-										<input type="email" name="email" class="form-control required" placeholder="Your Email">
-									</div>
-									<div class="form-group">
-										<input type="text" name="telephone" class="form-control" placeholder="Telephone">
-									</div>
-									<div class="form-group terms">
-										<label class="container_check">Please accept our <a href="#" data-toggle="modal" data-target="#terms-txt">Terms and conditions</a>
-											<input type="checkbox" name="terms" value="Yes" class="required">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-								</div>
-								<!-- /step-->
 								<div class="submit step">
-									<h3 class="main_question"><strong>5/5</strong>Summary</h3>
+									<h3 class="main_question"><strong>4/4</strong>Summary</h3>
 									<div class="summary">
 										<ul>
-											<li><strong>1</strong>
-												<h5>How do you describe your overall satisfaction?</h5>
-												<ul>
-													<li><label>Service provided</label> <span id="rating_input_1" class="float-right"></span></li>
-													<li><label>Product's quality</label> <span id="rating_input_2" class="float-right"></span></li>
-													<li><label>Support</label> <span id="rating_input_3" class="float-right"></span></li>
-													<li><label>General satisfaction</label> <span id="rating_input_4" class="float-right"></span></li>
-												</ul>
+											<li><strong></strong>
+												<h5>Apakah anda yakin akan menyimpan jawaban?</h5>
 											</li>
-											<li><strong>2</strong>
-												<h5>Your review and comments</h5>
-												<p id="review_message"></p>
-											</li>
-											
 										</ul>
 									</div>
 								</div>
 								<!-- /step-->
 							</div>
-							
 							<!-- /middle-wizard -->
 							<div id="bottom-wizard">
 								<button type="button" name="backward" class="backward">Prev</button>
@@ -899,11 +783,15 @@
     <script src="js/common_scripts.min.js"></script>
 	<script src="js/velocity.min.js"></script>
 	<script src="js/functions.js"></script>
+	<script src="js/file-validator.js"></script>
+	<script src="js/pw_strenght.js"></script>
 
 	<!-- Wizard script -->
-	<script src="js/review_func.js"></script>
+	<script src="js/quotation_func.js"></script>
+	<script src="js/registration_func.js"></script>
 
 	<script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "9XwwgTuanQ");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+	<script src="https://code.responsivevoice.org/responsivevoice.js?key=4rEZkvgc"></script>
 
 </body>
 </html>
