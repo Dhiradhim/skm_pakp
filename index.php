@@ -71,7 +71,7 @@
 					<!-- /social -->
 					<div>
 						<figure><img src="img/info_graphic_3.svg" alt="" class="img-fluid"></figure>
-						<h2>Quotation Wizard</h2>
+						<h2>pa kp</h2>
 						<p>Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas concludaturque usu, facete detracto patrioque an per, lucilius pertinacia eu vel. Adhuc invidunt duo ex. Eu tantas dolorum ullamcorper qui.</p>
 						<a href="#0" class="btn_1 rounded">Purchase this template</a>
 						<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
