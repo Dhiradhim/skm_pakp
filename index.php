@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Wilio Survey, Quotation, Review and Register form Wizard by Ansonika.">
     <meta name="author" content="Ansonika">
-    <title>Wilio | Survey, Quotation, Review and Register form Wizard</title>
+    <title>SKM DAN IPK PA KUPANG</title>
 
     <!-- Favicons-->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logopakp.png" type="image/x-icon">
     <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
@@ -70,7 +70,7 @@
 					</div>
 					<!-- /social -->
 					<div>
-						<figure><img src="img/info_graphic_3.svg" alt="" class="img-fluid"></figure>
+						<figure><img src="img/a.jpg" alt="" class="img-fluid"></figure>
 						<h2>SURVEI KEPUASAN MASYARAKAT</h2>
 						<h2>DAN</h2>
 						<h2>INDEKS PERSEPSI KORUPSI</h2>
@@ -142,7 +142,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<input type="text" name="instansi" class="form-control required" placeholder="Nama Instansi" onchange="getVals(this, 'instansi');">
+										<input type="text" name="instansi" class="form-control" placeholder="Nama Instansi" onchange="getVals(this, 'instansi');">
 									</div>
 									<div class="form-group">
 										<div class="styled-select clearfix">
