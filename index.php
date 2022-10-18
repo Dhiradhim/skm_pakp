@@ -59,7 +59,7 @@
 		<div class="row row-height">
 			<div class="col-lg-6 content-left">
 				<div class="content-left-wrapper">
-					<a href="index.html" id="logo"><img src="img/header.png" alt="" width="400" height="60"></a>
+					<a href="index.html" id="logo"><img src="img/header.png" alt=""width="400" height="60"></a>
 					<div id="social">
 						<ul>
 							<li><a href="https://pa-kupang.go.id/en/"><i class="icon-website-circled"></i></a></li>
@@ -70,10 +70,12 @@
 					</div>
 					<!-- /social -->
 					<div>
+						<br>
 						<figure><img src="img/a.jpg" alt="" class="img-fluid"></figure>
-						<h2>SURVEI KEPUASAN MASYARAKAT</h2>
-						<h2>DAN</h2>
-						<h2>INDEKS PERSEPSI KORUPSI</h2>
+						<hr>
+						<h2>Survei Kepuasan Masyarakat</h2>
+						<h2>dan</h2>
+						<h2>Indeks Persepsi Korupsi</h2>
 						<p>Survei kepuasan masyarakat digunakan untuk mengukur kepuasan masyarakat pengguna layanan di lingkungan Pengadilan Agama Kupang Kelas IA. Indeks persepsi korupsi sebagai wujud dukungan dan peran aktif Pengadilan Agama Kupang Kelas IA dalam kegiatan pencegahan dan pemberantasan korupsi.</p>
 						<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
 					</div>
@@ -94,100 +96,261 @@
 							<div id="middle-wizard">
 								<div class="step">
 									<h3 class="main_question"><strong>1/4</strong>Silahkan mengisi biodata Anda terlebih dahulu!</h3>
+									<hr>
+									<h3 class="main_question" class="wide required"><strong>1. Jenis Kelamin</strong></h3>
 									<div class="form-group">
-										<div class="styled-select clearfix">
-											<select class="wide required" name="jenis_kelamin" onchange="getVals(this, 'jenis_kelamin');">
-												<option value="">Jenis Kelamin</option>
-												<option value="Laki-Laki">Laki-Laki</option>                    
-												<option value="Perempuan">Perempuan</option>                    
-											</select>
-										</div>
+										<label class="container_check version_2">Laki-laki
+											<input type="radio" name="jenis_kelamin[]" value="laki-laki" class="required" onchange="getVals(this, 'jenis_kelamin');">
+											<span class="checkmark"></span>
+										</label>
 									</div>
 									<div class="form-group">
-										<div class="styled-select clearfix">
-											<select class="wide required" name="pendidikan" onchange="getVals(this, 'pendidikan');">
-												<option disabled selected value="">Pendidikan</option>
-												<option value="sd">SD (Sekolah Dasar)/Sederajat</option>                   
-												<option value="smp">SMP (Sekolah Menengah Pertama)/Sederajat</option>                   
-												<option value="sma">SMA (Sekolah Menengah Atas)/Sederajat</option>                   
-												<option value="diploma">D1/D2/D3/D4 (Diploma)</option>                   
-												<option value="s1">S1 (Sarjana)</option>                   
-												<option value="s2">S2 (Magister)</option>                   
-												<option value="s3">S3 (Doktor)</option>                   
-											</select>
-										</div>
+										<label class="container_check version_2">Perempuan
+											<input type="radio" name="jenis_kelamin[]" value="perempuan" class="required" onchange="getVals(this, 'jenis_kelamin');">
+											<span class="checkmark"></span>
+										</label>
 									</div>
+									<hr>
+									<h3 class="main_question"><strong>2. Pendidikan</strong></h3>
+									<div class="form-group">
+										<label class="container_check version_2">SD (Sekolah Dasar)/Sederajat
+											<input type="radio" name="pendidikan[]" value="SD_(Sekolah Dasar)/Sederajat" class="required" onchange="getVals(this, 'pendidikan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">SMP (Sekolah Menengah Pertama)/Sederajat
+											<input type="radio" name="pendidikan[]" value="SMP_(Sekolah Menengah Pertama)/Sederajat" class="required" onchange="getVals(this, 'pendidikan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">SMA (Sekolah Menengah Atas)/Sederajat
+											<input type="radio" name="pendidikan[]" value="SMA_(Sekolah Menengah Atas)/Sederajat Pertama)/Sederajat" class="required" onchange="getVals(this, 'pendidikan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">D1/D2/D3/D4 (Diploma)
+											<input type="radio" name="pendidikan[]" value="D1/D2/D3/D4_(Diploma) Pertama)/Sederajat" class="required" onchange="getVals(this, 'pendidikan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">S1 (Sarjana)
+											<input type="radio" name="pendidikan[]" value="S1_(Sarjana)" class="required" onchange="getVals(this, 'pendidikan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">S2 (Magister)
+											<input type="radio" name="pendidikan[]" value="S2_(Magister)" class="required" onchange="getVals(this, 'pendidikan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">S3 (Doktor)
+											<input type="radio" name="pendidikan[]" value="S3_(Doktor)" class="required" onchange="getVals(this, 'pendidikan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<hr>
+									<h3 class="main_question"><strong>3. Usia</strong></h3>
 									<div class="form-group">
 										<input type="text" name="usia" class="form-control required" placeholder="Usia" onchange="getVals(this, 'usia');">
 									</div>
+									<hr>
+									<h3 class="main_question"><strong>4. Pekerjaan</strong></h3>
 									<div class="form-group">
-										<div class="styled-select clearfix">
-											<select class="wide required" name="pekerjaan" onchange="getVals(this, 'pekerjaan');">
-												<option disabled selected value="">Pekerjaan</option>                             
-												<option value="PNS / TNI / POLRI">PNS / TNI / POLRI</option>                             
-												<option value="Pegawai Swasta">Pegawai Swasta</option>                             
-												<option value="Wiraswasta / Pengusaha">Wiraswasta / Pengusaha</option>                             
-												<option value="Pelajar / Mahasiswa">Pelajar / Mahasiswa</option>                             
-												<option value="Lainnya">Lainnya</option>                            
-											</select>
-										</div>
+										<label class="container_check version_2">PNS/TNI/POLRI
+											<input type="radio" name="pekerjaan[]" value="PNS/TNI/POLRI" class="required" onchange="getVals(this, 'pekerjaan');">
+											<span class="checkmark"></span>
+										</label>
 									</div>
 									<div class="form-group">
-										<div class="styled-select clearfix">
-											<select class="wide required" name="pihak" onchange="getVals(this, 'pihak');">
-												<option disabled selected value="">Untuk Pihak Siapa Saudara/i Menggunakan Layanan?</option>                             
-												<option value="Diri Sendiri">Diri Sendiri (Pribadi/Instansi)</option>                             
-												<option value="Orang Lain">Orang Lain (Kuasa/Kuasa Hukum/Pengacara)</option>                                                       
-											</select>
-										</div>
+										<label class="container_check version_2">Pegawai Swasta
+											<input type="radio" name="pekerjaan[]" value="pegawai_swasta" class="required" onchange="getVals(this, 'pekerjaan');">
+											<span class="checkmark"></span>
+										</label>
 									</div>
 									<div class="form-group">
-										<input type="text" name="instansi" class="form-control" placeholder="Nama Instansi" onchange="getVals(this, 'instansi');">
+										<label class="container_check version_2">Wiraswasta / Pengusaha
+											<input type="radio" name="pekerjaan[]" value="wiraswasta/pengusaha" class="required" onchange="getVals(this, 'pekerjaan');">
+											<span class="checkmark"></span>
+										</label>
 									</div>
 									<div class="form-group">
-										<div class="styled-select clearfix">
-											<select class="wide required" name="pihak2" onchange="getVals(this, 'pihak2');">
-												<option disabled selected value="">Keterkaitan Saudara/i dengan Layanan Peradilan</option>                             
-												<option value="Pemohon / Termohon / Penggugat / Tergugat">Pemohon / Termohon / Penggugat / Tergugat</option>                             
-												<option value="Kuasa Hukum / Penasehat Hukum">Kuasa Hukum / Penasehat Hukum</option>                                                       
-												<option value="Saksi">Saksi</option>                                                       
-												<option value="Lainnya">Lainnya</option>                                                       
-											</select>
-										</div>
+										<label class="container_check version_2">Pelajar/Mahasiswa
+											<input type="radio" name="pekerjaan[]" value="pelajar/mahasiswa" class="required" onchange="getVals(this, 'pekerjaan');">
+											<span class="checkmark"></span>
+										</label>
 									</div>
 									<div class="form-group">
-										<div class="styled-select clearfix">
-											<select class="wide required" name="layanan" onchange="getVals(this, 'layanan');">
-												<option disabled selected value="">Jenis Layanan / Keperluan</option>                             
-												<option value="Gugatan">Gugatan</option>                             
-												<option value="Permohonan">Permohonan</option>                                                       
-												<option value="Upaya Hukum">Upaya Hukum (Banding/Kasasi/PK)</option>                                                       
-												<option value="Lainnya">Lainnya</option>                                                       
-											</select>
-										</div>
+										<label class="container_check version_2">Lainnya
+											<input type="radio" name="pekerjaan[]" value="lainnya" class="required" onchange="getVals(this, 'pekerjaan');">
+											<span class="checkmark"></span>
+										</label>
 									</div>
 									<div class="form-group">
-										<div class="styled-select clearfix">
-											<select class="wide required" name="suku" onchange="getVals(this, 'suku');">
-												<option disabled selected value="">Suku Bangsa</option>                             
-												<option value="Alor">Alor</option>                             
-												<option value="Flores">Flores</option>                                                     
-												<option value="Bajawa">Bajawa</option>                                                     
-												<option value="Boti">Boti</option>                                                     
-												<option value="Sumba">Sumba</option>                                                     
-												<option value="Ende">Ende</option>                                                     
-												<option value="Manggarai">Manggarai</option>                                                     
-												<option value="Rote">Rote</option>                                                     
-												<option value="Lamaholot">Lamaholot</option>                                                     
-												<option value="Makassar">Makassar</option>                                                     
-												<option value="Bugis">Bugis</option>                                                     
-												<option value="Jawa">Jawa</option>                                                     
-												<option value="Lainnya">Lainnya</option>                                                     
-											</select>
-										</div>
+										<input type="text" name="lainnya" class="form-control required" placeholder="Lainnya" onchange="getVals(this, 'lainnya');">
 									</div>
-								</div>
-								
+									<hr>
+									<h3 class="main_question"><strong>4. Untuk pihak siapa Saudara menggunakan layanan?</strong></h3>
+									<div class="form-group">
+										<label class="container_check version_2">Diri Sendiri (Pribadi/Instansi)
+											<input type="radio" name="pihak[]" value="Diri Sendiri_(Pribadi/Instansi)" class="required" onchange="getVals(this, 'pihak');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Orang Lain (Kuasa/Kuasa Hukum/Pengacara)
+											<input type="radio" name="pihak[]" value="Orang_Lain_(Kuasa/Kuasa Hukum/Pengacara)" class="required" onchange="getVals(this, 'pihak');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Lainnya
+											<input type="radio" name="pekerjaan[]" value="lainnya" class="required" onchange="getVals(this, 'pekerjaan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<input type="text" name="lainnya" class="form-control required" placeholder="Lainnya" onchange="getVals(this, 'lainnya');">
+									</div>
+									<hr>
+									<h3 class="main_question"><strong>5. Nama instansi</strong></h3>
+									<div class="form-group">
+										<input type="text" name="lainnya" class="form-control required" placeholder="Nama instansi" onchange="getVals(this, 'lainnya');">
+									</div>
+									<hr>
+									<h3 class="main_question"><strong>6. Keterkaitan Saudara dengan layanan peradilan</strong></h3>
+									<div class="form-group">
+										<label class="container_check version_2">Pemohon / Termohon / Penggugat / Tergugat
+											<input type="radio" name="keterkaitan[]" value="Pemohon/Termohon/Penggugat/Tergugat" class="required" onchange="getVals(this, 'keterkaitan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Kuasa Hukum / Penasehat Hukum
+											<input type="radio" name="keterkaitan[]" value="Kuasa_Hukum/Penasehat_Hukum" class="required" onchange="getVals(this, 'keterkaitan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Saksi
+											<input type="radio" name="keterkaitan[]" value="Saksi" class="required" onchange="getVals(this, 'keterkaitan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Lainnya
+											<input type="radio" name="pekerjaan[]" value="lainnya" class="required" onchange="getVals(this, 'pekerjaan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<input type="text" name="lainnya" class="form-control required" placeholder="Lainnya" onchange="getVals(this, 'lainnya');">
+									</div>
+									<hr>
+									<h3 class="main_question"><strong>7. Jenis layanan/keperluan</strong></h3>
+									<div class="form-group">
+										<label class="container_check version_2">Gugatan
+											<input type="radio" name="jenis_layanan[]" value="gugatan" class="required" onchange="getVals(this, 'jenis_layanan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Permohonan
+											<input type="radio" name="jenis_layanan[]" value="permohonan" class="required" onchange="getVals(this, 'jenis_layanan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Upaya Hukum (Banding/Kasasi/PK)
+											<input type="radio" name="jenis_layanan[]" value="upaya_hukum_(banding/kasasi/pk)" class="required" onchange="getVals(this, 'jenis_layanan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Lainnya
+											<input type="radio" name="pekerjaan[]" value="lainnya" class="required" onchange="getVals(this, 'pekerjaan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<input type="text" name="lainnya" class="form-control required" placeholder="Lainnya" onchange="getVals(this, 'lainnya');">
+									</div>
+									<hr>
+									<h3 class="main_question"><strong>8. Suku bangsa</strong></h3>
+									<div class="form-group">
+										<label class="container_check version_2">Alor
+											<input type="radio" name="suku_bangsa[]" value="alor)" class="required" onchange="getVals(this, 'suku_bangsa');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Flores
+											<input type="radio" name="suku_bangsa[]" value="flores)" class="required" onchange="getVals(this, 'suku_bangsa');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Sabu
+											<input type="radio" name="suku_bangsa[]" value="bajawa)" class="required" onchange="getVals(this, 'suku_bangsa');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Boti
+											<input type="radio" name="suku_bangsa[]" value="boti)" class="required" onchange="getVals(this, 'suku_bangsa');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Sumba
+											<input type="radio" name="suku_bangsa[]" value="sumba)" class="required" onchange="getVals(this, 'suku_bangsa');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Manggarai
+											<input type="radio" name="suku_bangsa[]" value="manggarai)" class="required" onchange="getVals(this, 'suku_bangsa');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Rote
+											<input type="radio" name="suku_bangsa[]" value="rote)" class="required" onchange="getVals(this, 'suku_bangsa');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Makassar
+											<input type="radio" name="suku_bangsa[]" value="makassar)" class="required" onchange="getVals(this, 'suku_bangsa');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Bugis
+											<input type="radio" name="suku_bangsa[]" value="bugis)" class="required" onchange="getVals(this, 'suku_bangsa');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Jawa
+											<input type="radio" name="suku_bangsa[]" value="jawa)" class="required" onchange="getVals(this, 'suku_bangsa');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Lainnya
+											<input type="radio" name="pekerjaan[]" value="lainnya" class="required" onchange="getVals(this, 'pekerjaan');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<input type="text" name="lainnya" class="form-control required" placeholder="Lainnya" onchange="getVals(this, 'lainnya');">
+									</div>
 								<div class="step">
 									<h3 class="main_question"><strong>2/4</strong>Indeks Pelayanan Publik</h3>
 									<h3 class="main_question"><strong>1. Bagaimana pendapat Saudara tentang kesesuaian persyaratan pelayanan dengan jenis pelayanannya?</strong></h3>

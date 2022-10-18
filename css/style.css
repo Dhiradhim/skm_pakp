@@ -443,7 +443,7 @@ a.btn_1.rounded,
   display: flex;
   justify-content: center;
   align-items: top;
-  background-color: #D1F2EB;
+  background-color: #EBF5FB;
 }
 @media (max-width: 991px) {
   .content-right {
