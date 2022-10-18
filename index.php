@@ -250,7 +250,7 @@
 										</label>
 									</div>
 									<div class="form-group">
-										<input type="text" name="keterkaitan[]" id="lainnya3" class="form-control" placeholder="Lainnya">
+										<input type="text" name="keterkaitan[]" id="lainnya3" class="form-control" placeholder="Lainnya" disabled="true">
 									</div>
 									<hr>
 									<h3 class="main_question"><strong>8. Jenis layanan/keperluan</strong></h3>
@@ -279,7 +279,7 @@
 										</label>
 									</div>
 									<div class="form-group">
-										<input type="text" name="lainnya" id="lainnya4" class="form-control" placeholder="Lainnya">
+										<input type="text" name="lainnya" id="lainnya4" class="form-control" placeholder="Lainnya" disabled="true">
 									</div>
 									<hr>
 									<h3 class="main_question"><strong>9. Suku bangsa</strong></h3>
@@ -350,7 +350,7 @@
 										</label>
 									</div>
 									<div class="form-group">
-										<input type="text" name="suku_bangsa[]" id="lainnya5" class="form-control" placeholder="Lainnya" onchange="getVals(this, 'suku_bangsa');">
+										<input type="text" name="suku_bangsa[]" id="lainnya5" class="form-control" placeholder="Lainnya" disabled="true">
 									</div>
 								</div>
 								<div class="step">
