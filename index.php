@@ -221,7 +221,7 @@
 									<hr>
 									<h3 class="main_question"><strong>6. Nama instansi</strong></h3>
 									<div class="form-group">
-										<input type="text" name="instansi" class="form-control required" placeholder="Nama instansi" onchange="getVals(this, 'instansi');">
+										<input type="text" name="instansi" class="form-control" placeholder="Nama instansi" onchange="getVals(this, 'instansi');">
 									</div>
 									<hr>
 									<h3 class="main_question"><strong>7. Keterkaitan Saudara dengan layanan peradilan</strong></h3>
