@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +54,7 @@
 		<div class="row row-height">
 			<div class="col-lg-6 content-left">
 				<div class="content-left-wrapper">
-					<a href="index.html" id="logo"><img src="img/header.png" alt=""width="400" height="60"></a>
+					<a href="index.html" id="logo"><img src="img/header.png" alt="" height="60"></a>
 					<div id="social">
 						<ul>
 							<li><a href="https://pa-kupang.go.id/en/"><i class="icon-website-circled"></i></a></li>
@@ -62,13 +66,9 @@
 					<!-- /social -->
 					<div>
 						<br>
-						<figure><img src="img/a.jpg" alt="" class="img-fluid"></figure>
+						<figure><img src="img/a.png" alt="" class="img-fluid"></figure>
 						<hr>
-						<h2>Survei Kepuasan Masyarakat</h2>
-						<h2>dan</h2>
-						<h2>Indeks Persepsi Korupsi</h2>
 						<p>Survei kepuasan masyarakat digunakan untuk mengukur kepuasan masyarakat pengguna layanan di lingkungan Pengadilan Agama Kupang Kelas IA. Indeks persepsi korupsi sebagai wujud dukungan dan peran aktif Pengadilan Agama Kupang Kelas IA dalam kegiatan pencegahan dan pemberantasan korupsi.</p>
-						<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
 					</div>
 				</div>
 				<!-- /content-left-wrapper -->
