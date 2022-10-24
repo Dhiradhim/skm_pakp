@@ -89,9 +89,11 @@ include('koneksi.php');
 									<h3 class="main_question"><strong>1/4</strong>Silahkan mengisi biodata Anda terlebih dahulu!</h3>
 									<hr>
 									<h3 class="main_question" class="wide required"><strong>1. Jenis Kelamin</strong></h3>
+									<input type="hidden" name="tanggal" value='<?=date("Y-m-d") ?>'>
 									<div class="form-group">
 										<label class="container_check version_2">Laki-laki
 											<input type="radio" name="jenis_kelamin" value="laki-laki" class="required" onchange="getVals(this, 'jenis_kelamin');">
+											
 											<span class="checkmark"></span>
 										</label>
 									</div>

@@ -1,6 +1,7 @@
 <?php
 include "koneksi.php";
 $jenis_kelamin=$_POST['jenis_kelamin'];
+$tanggal=$_POST['tanggal'];
 $pendidikan=$_POST['pendidikan'];
 $pekerjaan=$_POST['pekerjaan'];
 $usia=$_POST['usia'];
@@ -46,7 +47,7 @@ $question_19=$_POST['question_19'];
 $question_20=$_POST['question_20'];
 
 
-$query = "INSERT into responden (jenis_kelamin,pendidikan,pekerjaan,usia,pihak,keterkaitan,instansi,jenis_layanan,suku_bangsa,question_1,question_2,question_3,question_4,question_5,question_6,question_7,question_8,question_9,question_10,question_11,question_12,question_13,question_14,question_15,question_16,question_17,question_18,question_19,question_20) values ('$jenis_kelamin','$pendidikan','$pekerjaan','$usia','$pihak','$keterkaitan','$instansi','$jenis_layanan','$suku_bangsa','$question_1','$question_2','$question_3','$question_4','$question_5','$question_6','$question_7','$question_8','$question_9','$question_10','$question_11','$question_12','$question_13','$question_14','$question_15','$question_16','$question_17','$question_18','$question_19','$question_20')";
+$query = "INSERT into responden (jenis_kelamin,tanggal,pendidikan,pekerjaan,usia,pihak,keterkaitan,instansi,jenis_layanan,suku_bangsa,question_1,question_2,question_3,question_4,question_5,question_6,question_7,question_8,question_9,question_10,question_11,question_12,question_13,question_14,question_15,question_16,question_17,question_18,question_19,question_20) values ('$jenis_kelamin','$tanggal','$pendidikan','$pekerjaan','$usia','$pihak','$keterkaitan','$instansi','$jenis_layanan','$suku_bangsa','$question_1','$question_2','$question_3','$question_4','$question_5','$question_6','$question_7','$question_8','$question_9','$question_10','$question_11','$question_12','$question_13','$question_14','$question_15','$question_16','$question_17','$question_18','$question_19','$question_20')";
 $sql=mysqli_query($con, $query);
 //echo $query;
 echo '<script type="text/javascript">alert("Data anda sudah tersimpan, terimakasih."); </script>';
