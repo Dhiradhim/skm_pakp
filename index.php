@@ -54,13 +54,13 @@ include('koneksi.php');
 		<div class="row row-height">
 			<div class="col-lg-6 content-left">
 				<div class="content-left-wrapper">
-					<a href="index.html" id="logo"><img src="img/header.png" alt="" height="60"></a>
+					<a href="#" id="logo"><img src="img/header.png" alt="" height="60"></a>
 					<div id="social">
 						<ul>
-							<li><a href="https://pa-kupang.go.id/en/"><i class="icon-website-circled"></i></a></li>
-							<li><a href="https://m.facebook.com/profile.php?id=109129409741134"><i class="icon-facebook"></i></a></li>
-							<li><a href="https://www.youtube.com/channel/UCC5924YhYN_4rCVSjKDRdxA"><i class="icon-youtube"></i></a></li>
-							<li><a href="https://www.instagram.com/pa_kupang/"><i class="icon-instagram"></i></a></li>
+							<li><a target="_blank" href="https://pa-kupang.go.id/en/"><i class="icon-website-circled"></i></a></li>
+							<li><a target="_blank" href="https://www.facebook.com/pengadilanagama.kupang"><i class="icon-facebook"></i></a></li>
+							<li><a target="_blank" href="https://www.youtube.com/channel/UCC5924YhYN_4rCVSjKDRdxA"><i class="icon-youtube"></i></a></li>
+							<li><a target="_blank" href="https://www.instagram.com/pa_kupang/"><i class="icon-instagram"></i></a></li>
 						</ul>
 					</div>
 					<!-- /social -->
