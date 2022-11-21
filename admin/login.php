@@ -93,6 +93,7 @@ if(isset($_POST['login']))
     {
       echo "<script>alert('Login Berhasil')</script>";
       $_SESSION['username']=$xrun['username'];
+      $_SESSION['nama']=$xrun['nama'];
       $_SESSION['tahun']=$_POST['tahun'];
       
       echo "<script>window.open('index.php','_self')</script>";  
