@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php
+session_start(); 
 include('head.html');
 ?>
   <body class="nav-md">
@@ -14,10 +15,6 @@ include('head.html');
             </div>
 
             <div class="clearfix"></div>
-
-
-           
-
             <?php include('sidebar.html'); ?>
           </div>
         </div>
