@@ -1,9 +1,19 @@
 <?php
 session_start(); 
+$tahun = $_SESSION['tahun'];
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Data Triwulan 4 - Tahun <?=$tahun?></title>
 
 <?php
 include('head.html');
@@ -14,7 +24,7 @@ include('head.html');
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-pencil"></i> <span>SKM-IPAK</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-pencil"></i><span>SKM-IPAK</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -39,14 +49,13 @@ include('head.html');
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Data SKM dan IPAK Triwulan 4</h2>
+                    <h2>Data SKM dan IPAK Triwulan 4 Tahun <?=$tahun?></h2>
                     
                     <div class="clearfix"></div>
                   </div>
                   <!-- QUERY -->
                   <?php
-                  include ('../koneksi.php');
-                    $tahun = $_SESSION['tahun'];
+                  include ('../koneksi.php');                    
                     $sql = "SELECT * FROM responden WHERE LEFT(tanggal,7)>='$tahun-10' AND LEFT(tanggal,7)<='$tahun-12' ORDER BY tanggal asc";
                     $query = mysqli_query($con, $sql) or die(mysqli_connect_error());
                     $data = mysqli_fetch_assoc($query);

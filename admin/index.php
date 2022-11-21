@@ -1,10 +1,19 @@
 <?php
 session_start(); 
+$tahun = $_SESSION['tahun'];
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dashboard</title>
 <?php
 include('head.html');
 ?>
@@ -46,7 +55,6 @@ include('head.html');
                   <!-- QUERY -->
                   <?php
                   include ('../koneksi.php');
-                    $tahun = $_SESSION['tahun'];
                     $sql = "SELECT * FROM responden WHERE LEFT(tanggal,7)>='$tahun-10' AND LEFT(tanggal,7)<='$tahun-12' ORDER BY tanggal asc";
                     $query = mysqli_query($con, $sql) or die(mysqli_connect_error());
                     $data = mysqli_fetch_assoc($query);
