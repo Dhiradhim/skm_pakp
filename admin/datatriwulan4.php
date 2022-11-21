@@ -64,6 +64,7 @@ include('head.html');
                     $data = mysqli_fetch_assoc($query);
                     $count = mysqli_num_rows($query);
                     $no = 1;
+                    echo $sql;
                   ?>
                   <!-- QUERY -->
                   <div class="x_content">
