@@ -13,6 +13,7 @@ include('session.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Dashboard</title>
+    
 <?php
 include('head.html');
 ?>
