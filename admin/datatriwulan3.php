@@ -1,6 +1,5 @@
 <?php
-session_start(); 
-$tahun = $_SESSION['tahun'];
+include('session.php');
 ?>
 
 <!DOCTYPE html>
