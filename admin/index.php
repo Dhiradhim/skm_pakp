@@ -13,7 +13,7 @@ include('session.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Dashboard</title>
-    
+
 <?php
 include('head.html');
 ?>
@@ -40,7 +40,7 @@ include('head.html');
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Data Responden</h3>
+                <h3>Dashboard</h3>
               </div>
               </div>
             </div>
@@ -48,7 +48,7 @@ include('head.html');
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Data SKM dan IPAK Triwulan 4</h2>
+                    <h2>Dashboard</h2>
                     
                     <div class="clearfix"></div>
                   </div>
