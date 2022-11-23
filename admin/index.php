@@ -12,7 +12,7 @@ include('session.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Dashboard</title>
+    <title>Data Triwulan 1 - Tahun <?=$tahun?></title>
 
 <?php
 include('head.html');
@@ -35,41 +35,156 @@ include('head.html');
         <?php include('top.html'); ?>
         <!-- /top navigation -->
 
+        <!-- QUERY -->
+        <?php
+          include ('../koneksi.php');
+          $no = 1;     
+          //Jumlah Responden               
+            $sql1 = "SELECT (select count(*) from responden where left(tanggal,7)>='$tahun-01' and left(tanggal,7)<='$tahun-03') as tw1, (select count(*) from responden where left(tanggal,7)>='$tahun-04' and left(tanggal,7)<='$tahun-06') as tw2,(select count(*) from responden where left(tanggal,7)>='$tahun-07' and left(tanggal,7)<='$tahun-09') as tw3, (select count(*) from responden where left(tanggal,7)>='$tahun-10' and left(tanggal,7)<='$tahun-12') as tw4, (select count(*) from responden where left(tanggal,7)>='$tahun-01' and left(tanggal,7)<='$tahun-12') as thn FROM responden limit 1";
+            $query1 = mysqli_query($con, $sql1) or die(mysqli_connect_error());
+            $data1 = mysqli_fetch_assoc($query1);
+            $count1 = mysqli_num_rows($query1);
+            
+          //Total SKM
+            $sql2 = "SELECT * FROM responden";
+            $query2 = mysqli_query($con, $sql2) or die(mysqli_connect_error());
+            $data2 = mysqli_fetch_assoc($query2);
+            $count2 = mysqli_num_rows($query2);
+            $jumlah_skm_total=0;
+            do {
+              $jumlah_skm = 0;
+              $jumlah_skm = $data2['question_1']+$data2['question_2']+$data2['question_3']+$data2['question_4']+$data2['question_5']+$data2['question_6']+$data2['question_7']+$data2['question_8']+$data2['question_9']+$data2['question_10'];
+              $jumlah_skm_total=$jumlah_skm_total+$jumlah_skm;
+            } while ($data2 = mysqli_fetch_assoc($query2));
+            $rata_skm=$jumlah_skm_total/(4*$count2);
+            $rata_skm2=$rata_skm/10*4;
+            
+            //Total IPAK
+              $sql3 = "SELECT * FROM responden";
+              $query3= mysqli_query($con, $sql3) or die(mysqli_connect_error());
+              $data3 = mysqli_fetch_assoc($query3);
+              $count3 = mysqli_num_rows($query3);
+              $jumlah_ipak_total=0;
+              do {
+                $jumlah_ipak = 0;
+                $jumlah_ipak = $data3['question_11']+$data3['question_12']+$data3['question_13']+$data3['question_14']+$data3['question_15']+$data3['question_16']+$data3['question_17']+$data3['question_18']+$data3['question_19']+$data3['question_20'];
+                $jumlah_ipak_total=$jumlah_ipak_total+$jumlah_ipak;
+              } while ($data3 = mysqli_fetch_assoc($query3));
+              $rata_ipak=$jumlah_ipak_total/(4*$count2);
+              $rata_ipak2=$rata_ipak/10*4;
+            ?>
+          <!-- QUERY -->
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="">
-            <div class="page-title">
-              <div class="title_left">
-                <h3>Dashboard</h3>
-              </div>
+          <div class="row" style="display: inline-block;" >
+              <div class="tile_count">
+                <div class="col-md-4 col-sm-4  tile_stats_count">
+                  <span class="count_top"><i class="fa fa-user"></i> Total Responden</span>
+                  <div class="count"><?=$data1['thn'];?></div>
+                  <span class="count_bottom">Tahun <i class="green"><?=$tahun;?></i></span>
+                </div>
+                <div class="col-md-4 col-sm-4  tile_stats_count">
+                  <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
+                  <div class="count">7,325</div>
+                  <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+                </div>
+                <div class="col-md-4 col-sm-4  tile_stats_count">
+                  <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
+                  <div class="count">7,325</div>
+                  <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+                </div>
               </div>
             </div>
-
-              <div class="col-md-12 col-sm-12 ">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Dashboard</h2>
-                    
-                    <div class="clearfix"></div>
-                  </div>
-                  <!-- QUERY -->
-                  <?php
-                  include ('../koneksi.php');
-                    $sql = "SELECT * FROM responden WHERE LEFT(tanggal,7)>='$tahun-10' AND LEFT(tanggal,7)<='$tahun-12' ORDER BY tanggal asc";
-                    $query = mysqli_query($con, $sql) or die(mysqli_connect_error());
-                    $data = mysqli_fetch_assoc($query);
-                    $count = mysqli_num_rows($query);
-                    $no = 1;
-                  ?>
-                  <!-- QUERY -->
-                  <div class="x_content">
-                      <div class="row">
-                          <div class="col-sm-12">
-                            <div class="card-box table-responsive">
-                              
+            <br>
+            <div class="row" style="display: inline-block;" >
+              <div class="tile_count">
+                <div class="col-md-3 col-sm-4  tile_stats_count">
+                  <span class="count_top"><i class="fa fa-user"></i> Total Responden</span>
+                  <div class="count"><?=$data1['tw1'];?></div>
+                  <span class="count_bottom">Triwulan <i class="green">1</i></span>
+                </div>
+                <div class="col-md-3 col-sm-4  tile_stats_count">
+                  <span class="count_top"><i class="fa fa-user"></i> Total Responden</span>
+                  <div class="count"><?=$data1['tw2'];?></div>
+                  <span class="count_bottom">Triwulan <i class="green">2</i></span>
+                </div>
+                <div class="col-md-3 col-sm-4  tile_stats_count">
+                  <span class="count_top"><i class="fa fa-user"></i> Total Responden</span>
+                  <div class="count"><?=$data1['tw3'];?></div>
+                  <span class="count_bottom">Triwulan <i class="green">3</i></span>
+                </div>
+                <div class="col-md-3 col-sm-4  tile_stats_count">
+                  <span class="count_top"><i class="fa fa-user"></i> Total Responden</span>
+                  <div class="count"><?=$data1['tw4'];?></div>
+                  <span class="count_bottom">Triwulan <i class="green">4</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="row">
+                <div class="col-md-6 col-sm-6  ">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <h2>Jenis Layanan</h2>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                      <h4></h4>
+                      <div class="widget_summary">
+                        <div class="w_left w_25">
+                          <span>Gugatan</span>
+                        </div>
+                        <div class="w_center w_55">
+                          <div class="progress">
+                            <div class="bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
                             </div>
                           </div>
                         </div>
+                        <div class="w_right w_20">
+                          <span>123k</span>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="widget_summary">
+                        <div class="w_left w_25">
+                          <span>Permohonan</span>
+                        </div>
+                        <div class="w_center w_55">
+                          <div class="progress">
+                            <div class="bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="w_right w_20">
+                          <span>123k</span>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6  ">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <h2>App Versions</h2>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                      <h4>App Usage across versions</h4>
+                      <div class="widget_summary">
+                        <div class="w_left w_25">
+                          <span>0.1.5.2</span>
+                        </div>
+                        <div class="w_center w_55">
+                          <div class="progress">
+                            <div class="bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="w_right w_20">
+                          <span>123k</span>
+                        </div>
+                        <div class="clearfix"></div>
                       </div>
                     </div>
                   </div>
