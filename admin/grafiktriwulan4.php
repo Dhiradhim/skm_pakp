@@ -738,6 +738,21 @@ include('head.html');
                       </div>
                       <div class="widget_summary">
                         <div class="w_left w_25">
+                          <span>Bugis</span>
+                        </div>
+                        <div class="w_center w_55">
+                          <div class="progress">
+                            <div class="bg-green" role="progressbar"  style="width: <?=number_format((float)$percent_bugis, 1, '.', '');?>%;">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="w_right w_20">
+                          <span><?=$bugis;?> / <?=number_format((float)$percent_bugis, 2, '.', '');?>%</span>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="widget_summary">
+                        <div class="w_left w_25">
                           <span>Lainnya</span>
                         </div>
                         <div class="w_center w_55">
