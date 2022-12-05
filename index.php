@@ -319,20 +319,26 @@ include('koneksi.php');
 										</label>
 									</div>
 									<div class="form-group">
-										<label class="container_check version_2">Makassar
-											<input type="radio" name="suku_bangsa" value="Makassar" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_check version_2">Bugis
-											<input type="radio" name="suku_bangsa" value="Bugis" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
+										<label class="container_check version_2">Timor
+											<input type="radio" name="suku_bangsa" value="Timor" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_check version_2">Jawa
 											<input type="radio" name="suku_bangsa" value="Jawa" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Madura
+											<input type="radio" name="suku_bangsa" value="Madura" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Bugis
+											<input type="radio" name="suku_bangsa" value="Bugis" class="required radio5" onchange="getVals(this, 'suku_bangsa');">
 											<span class="checkmark"></span>
 										</label>
 									</div>

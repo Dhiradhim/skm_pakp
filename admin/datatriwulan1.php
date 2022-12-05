@@ -97,25 +97,25 @@ include('head.html');
 
         <!-- page content -->
         <div class="right_col" role="main">
-        <div class="row" style="display: inline-block;" >
-              <div class="tile_count">
-                <div class="col-md-4 col-sm-4  tile_stats_count">
-                  <span class="count_top"><i class="fa fa-user"></i> Total Responden</span>
-                  <div class="count"><?=$count1;?></div>
-                  <span class="count_bottom">Tahun <i class="green"><?=$tahun;?></i></span>
-                </div>
-                <div class="col-md-4 col-sm-4  tile_stats_count">
-                  <span class="count_top"><i class="fa fa-user"></i> Nilai SKM</span>
-                  <div class="count"><?=number_format((float)$rata_skm2, 1, '.', '');?>/<?=number_format((float)$rata_skm, 1, '.', '');?></div>
-                  <span class="count_bottom">Triwulan <i class="green">1</i></span>
-                </div>
-                <div class="col-md-4 col-sm-4  tile_stats_count">
-                  <span class="count_top"><i class="fa fa-user"></i> Nilai IPAK</span>
-                  <div class="count"><?=number_format((float)$rata_ipak2, 1, '.', '');?>/<?=number_format((float)$rata_ipak, 1, '.', '');?></div>
-                  <span class="count_bottom">Triwulan <i class="green">1</i></span>
-                </div>
+          <div class="row" style="display: inline-block;" >
+            <div class="tile_count">
+              <div class="col-md-4 col-sm-4  tile_stats_count">
+                <span class="count_top"><i class="fa fa-user"></i> Total Responden</span>
+                <div class="count"><?=$count1;?></div>
+                <span class="count_bottom">Triwulan <i class="green">1</i></span>
+              </div>
+              <div class="col-md-4 col-sm-4  tile_stats_count">
+                <span class="count_top"><i class="fa fa-user"></i> Nilai SKM</span>
+                <div class="count"><?=number_format((float)$rata_skm2, 1, '.', '');?>/<?=number_format((float)$rata_skm, 1, '.', '');?></div>
+                <span class="count_bottom">Triwulan <i class="green">1</i></span>
+              </div>
+              <div class="col-md-4 col-sm-4  tile_stats_count">
+                <span class="count_top"><i class="fa fa-user"></i> Nilai IPAK</span>
+                <div class="count"><?=number_format((float)$rata_ipak2, 1, '.', '');?>/<?=number_format((float)$rata_ipak, 1, '.', '');?></div>
+                <span class="count_bottom">Triwulan <i class="green">1</i></span>
               </div>
             </div>
+          </div>
             <br>
             
           <div class="">
