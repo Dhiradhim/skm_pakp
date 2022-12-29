@@ -78,20 +78,10 @@ include('head.html');
         <div class="right_col" role="main">
           <div class="row" style="display: inline-block;" >
               <div class="tile_count">
-                <div class="col-md-4 col-sm-4  tile_stats_count">
+                <div class="col-md-12 col-sm-12  tile_stats_count">
                   <span class="count_top"><i class="fa fa-user"></i> Total Responden</span>
                   <div class="count"><?=$data1['thn'];?></div>
                   <span class="count_bottom">Tahun <i class="green"><?=$tahun;?></i></span>
-                </div>
-                <div class="col-md-4 col-sm-4  tile_stats_count">
-                  <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-                  <div class="count">7,325</div>
-                  <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-                </div>
-                <div class="col-md-4 col-sm-4  tile_stats_count">
-                  <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-                  <div class="count">7,325</div>
-                  <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                 </div>
               </div>
             </div>
@@ -121,75 +111,7 @@ include('head.html');
               </div>
             </div>
             <div class="">
-              <div class="row">
-                <div class="col-md-6 col-sm-6  ">
-                  <div class="x_panel">
-                    <div class="x_title">
-                      <h2>Jenis Layanan</h2>
-                      <div class="clearfix"></div>
-                    </div>
-                    <div class="x_content">
-                      <h4></h4>
-                      <div class="widget_summary">
-                        <div class="w_left w_25">
-                          <span>Gugatan</span>
-                        </div>
-                        <div class="w_center w_55">
-                          <div class="progress">
-                            <div class="bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="w_right w_20">
-                          <span>123k</span>
-                        </div>
-                        <div class="clearfix"></div>
-                      </div>
-                      <div class="widget_summary">
-                        <div class="w_left w_25">
-                          <span>Permohonan</span>
-                        </div>
-                        <div class="w_center w_55">
-                          <div class="progress">
-                            <div class="bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="w_right w_20">
-                          <span>123k</span>
-                        </div>
-                        <div class="clearfix"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-6  ">
-                  <div class="x_panel">
-                    <div class="x_title">
-                      <h2>App Versions</h2>
-                      <div class="clearfix"></div>
-                    </div>
-                    <div class="x_content">
-                      <h4>App Usage across versions</h4>
-                      <div class="widget_summary">
-                        <div class="w_left w_25">
-                          <span>0.1.5.2</span>
-                        </div>
-                        <div class="w_center w_55">
-                          <div class="progress">
-                            <div class="bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="w_right w_20">
-                          <span>123k</span>
-                        </div>
-                        <div class="clearfix"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
