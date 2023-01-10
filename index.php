@@ -956,26 +956,31 @@ include('koneksi.php');
 	<script>
 		$('.radio1').change(function() {
   		$('#lainnya1').prop('disabled', !$(this).is('.other1'));
+  		$('#lainnya1').prop('required', $(this).is('.other1'));
 		});
 	</script>
 	<script>
 		$('.radio2').change(function() {
   		$('#lainnya2').prop('disabled', !$(this).is('.other2'));
+		$('#lainnya2').prop('required', $(this).is('.other2'));
 		});
 	</script>
 	<script>
 		$('.radio3').change(function() {
   		$('#lainnya3').prop('disabled', !$(this).is('.other3'));
+		$('#lainnya3').prop('required', $(this).is('.other3'));
 		});
 	</script>
 	<script>
 		$('.radio4').change(function() {
   		$('#lainnya4').prop('disabled', !$(this).is('.other4'));
+		$('#lainnya4').prop('required', $(this).is('.other4'));
 		});
 	</script>
 	<script>
 		$('.radio5').change(function() {
   		$('#lainnya5').prop('disabled', !$(this).is('.other5'));
+		$('#lainnya5').prop('required', $(this).is('.other5'));
 		});
 	</script>
 </body>
