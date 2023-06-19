@@ -498,7 +498,7 @@ include('koneksi.php');
 										</label>
 									</div>
 									<div class="form-group">
-										<label class="container_check version_2">Mahal
+										<label class="container_check version_2">Wajar
 											<input type="radio" name="question_6" value="3" class="required" onchange="getVals(this, 'question_6');">
 											<span class="checkmark"></span>
 										</label>
